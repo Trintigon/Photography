@@ -6,6 +6,7 @@
 <title>Trintigon — Photography</title>
 <meta name="description" content="Trintigon Photography — portrait, landscape and editorial photography.">
 <meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 91.93 100'><path fill='%2523f2f0ed' d='M47.24 99.69C47.05 99.52 45.88 98.04 44.64 96.4C42.01 92.92 33.57 81.93 26.05 72.19C23.14 68.43 20.47 64.97 20.12 64.5C19.14 63.22 19.29 62.09 20.52 61.58C21.71 61.09 21.5 60.86 28.25 69.65C30.89 73.07 33.45 76.39 33.95 77.02C34.44 77.64 37.8 82.01 41.4 86.71C45.0 91.41 48.0 95.26 48.07 95.26C48.13 95.26 48.9 94.26 49.77 93.03C52.58 89.06 56.5 83.5 58.6 80.53C64.55 72.08 67.64 67.76 68.04 67.32C68.68 66.64 69.66 66.65 70.36 67.35C71.0 67.99 71.03 68.68 70.47 69.49C70.24 69.82 68.77 71.9 67.19 74.12C65.61 76.34 63.88 78.79 63.34 79.56C62.79 80.33 61.26 82.5 59.92 84.39C56.97 88.54 55.89 90.07 52.55 94.82C49.02 99.83 48.88 100.0 48.17 100.0C47.85 100.0 47.43 99.86 47.24 99.69ZM73.51 63.67C72.57 63.46 71.93 62.64 71.94 61.62C71.95 60.17 72.79 59.3 74.19 59.3C74.84 59.3 75.05 59.4 75.63 59.98C76.21 60.56 76.32 60.77 76.32 61.41C76.32 62.21 75.81 63.22 75.3 63.42C74.56 63.72 74.08 63.79 73.51 63.67ZM15.42 58.05C14.91 57.86 9.88 51.17 7.3 47.25C3.69 41.77 1.77 37.35 0.7 32.07C-1.85 19.6 3.62 7.73 14.3 2.54C17.45 1.01 20.04 0.38 23.77 0.23C30.54 -0.03 36.17 2.13 40.8 6.75C42.65 8.6 44.66 11.4 45.45 13.22C45.69 13.76 45.93 14.19 45.99 14.16C46.05 14.14 46.47 13.41 46.93 12.54C48.11 10.28 49.46 8.48 51.42 6.58C57.6 0.58 66.33 -1.41 74.74 1.26C83.0 3.89 89.33 10.92 91.3 19.65C92.87 26.63 91.4 35.49 87.3 43.65C85.22 47.79 80.71 55.12 80.07 55.41C79.34 55.75 78.78 55.65 78.23 55.1C77.37 54.24 77.49 53.82 79.54 50.53C84.74 42.19 86.75 37.74 88.02 31.8C88.45 29.77 88.49 29.22 88.49 25.79C88.5 21.47 88.28 20.19 87.03 16.97C85.91 14.11 84.62 12.17 82.28 9.81C78.86 6.37 75.44 4.55 70.87 3.76C68.44 3.34 64.72 3.49 62.37 4.1C56.89 5.54 52.16 9.38 49.61 14.47C48.83 16.03 47.94 18.77 47.68 20.47C47.51 21.57 47.39 21.85 46.97 22.21C46.34 22.74 45.6 22.75 44.99 22.23C44.6 21.9 44.48 21.54 44.2 19.96C42.53 10.65 35.15 4.08 25.79 3.57C22.25 3.38 18.96 4.04 15.7 5.6C8.04 9.27 3.34 17.1 3.33 26.18L3.33 28.24L21.42 28.29L39.5 28.33L39.93 28.83C40.53 29.53 40.51 30.57 39.89 31.15L39.42 31.58L21.73 31.58C4.56 31.58 4.04 31.59 4.04 31.91C4.04 32.09 4.27 33.04 4.55 34.02C6.17 39.66 8.73 44.09 15.56 53.11C17.96 56.28 18.09 56.62 17.24 57.53C16.69 58.13 16.08 58.3 15.42 58.05Z'/></svg>">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Trintigon — Photography">
@@ -105,13 +106,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   border-bottom-color:var(--line);
 }
 .brand{line-height:1.1}
-.brand b{
+.brand__type b{
   display:block;
   font-family:var(--display);
   font-size:1.32rem;font-weight:400;
   letter-spacing:.24em;text-transform:uppercase;
 }
-.brand span{
+.brand__type span{
   display:block;
   font-size:.55rem;letter-spacing:.5em;text-transform:uppercase;
   color:var(--ink-faint);margin-top:.25rem;padding-left:.2em;
@@ -393,6 +394,7 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
   padding:clamp(3rem,8vh,5rem) clamp(1rem,6vw,5rem);
 }
 .lightbox.is-open{opacity:1;visibility:visible}
+body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
 .lightbox img{
   max-width:100%;max-height:100%;object-fit:contain;
   transform:scale(.97);opacity:0;
@@ -422,6 +424,47 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
 .reveal[data-d="3"]{transition-delay:.27s}
 
 /* ============================================================
+   BRAND MARK
+   ============================================================ */
+.mark{display:block;width:auto;height:1em;color:inherit;flex:none}
+
+.brand{display:flex;align-items:center;gap:.85rem}
+.brand__mark{
+  height:2.1rem;color:var(--ink);
+  transition:color .5s var(--ease),transform .6s var(--ease);
+}
+.brand:hover .brand__mark{color:var(--accent);transform:translateY(-2px)}
+
+.hero__mark{
+  height:clamp(3.4rem,6.4vw,5.2rem);
+  color:var(--ink);
+  opacity:0;transform:translateY(18px);
+  animation:markIn 1.4s var(--ease) .25s forwards;
+  margin-bottom:2.1rem;
+}
+@keyframes markIn{to{opacity:.96;transform:none}}
+
+.head__mark{height:2.4rem;color:var(--accent);margin-bottom:1.6rem}
+
+.tile__mark{
+  position:absolute;right:1.4rem;bottom:1.4rem;z-index:3;
+  height:1.7rem;color:var(--ink);
+  opacity:0;transform:translateY(10px);
+  transition:opacity .6s var(--ease) .06s,transform .6s var(--ease) .06s;
+  pointer-events:none;
+}
+.tile:hover .tile__mark,.tile:focus-visible .tile__mark{opacity:.9;transform:none}
+
+.lb-mark{
+  position:absolute;bottom:1.5rem;left:clamp(1rem,5vw,3rem);
+  height:1.6rem;color:var(--ink-dim);opacity:.7;
+}
+
+.footer__mark{height:1.5rem;color:var(--ink-faint);transition:color .4s var(--ease)}
+.footer__brand{display:flex;align-items:center;gap:.85rem}
+.footer__brand:hover .footer__mark{color:var(--accent)}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media(max-width:1024px){
@@ -448,6 +491,8 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
   .grid{gap:.6rem}
   .tile,.tile--tall,.tile--half,.tile--wide{grid-column:span 12;aspect-ratio:4/5}
   .tile figcaption{transform:none;opacity:1}
+  .tile__mark{opacity:.75;transform:none;height:1.4rem;right:1.1rem;bottom:1.1rem}
+  .brand__mark{height:1.85rem}
   .tile img{filter:grayscale(.2) brightness(.85)}
   .hero__foot{border-top:0;padding-top:0}
   .eyebrow{letter-spacing:.3em;font-size:.62rem}
@@ -459,16 +504,25 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none}
+  .hero__mark{opacity:.96;transform:none;animation:none}
 }
 </style>
 </head>
 <body>
 
+<!-- Brand mark. Vector trace of the Trintigon logo; also saved standalone at assets/logo.svg -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <symbol id="mark" viewBox="0 0 91.93 100"><path fill="currentColor" d="M47.24 99.69C47.05 99.52 45.88 98.04 44.64 96.4C42.01 92.92 33.57 81.93 26.05 72.19C23.14 68.43 20.47 64.97 20.12 64.5C19.14 63.22 19.29 62.09 20.52 61.58C21.71 61.09 21.5 60.86 28.25 69.65C30.89 73.07 33.45 76.39 33.95 77.02C34.44 77.64 37.8 82.01 41.4 86.71C45.0 91.41 48.0 95.26 48.07 95.26C48.13 95.26 48.9 94.26 49.77 93.03C52.58 89.06 56.5 83.5 58.6 80.53C64.55 72.08 67.64 67.76 68.04 67.32C68.68 66.64 69.66 66.65 70.36 67.35C71.0 67.99 71.03 68.68 70.47 69.49C70.24 69.82 68.77 71.9 67.19 74.12C65.61 76.34 63.88 78.79 63.34 79.56C62.79 80.33 61.26 82.5 59.92 84.39C56.97 88.54 55.89 90.07 52.55 94.82C49.02 99.83 48.88 100.0 48.17 100.0C47.85 100.0 47.43 99.86 47.24 99.69ZM73.51 63.67C72.57 63.46 71.93 62.64 71.94 61.62C71.95 60.17 72.79 59.3 74.19 59.3C74.84 59.3 75.05 59.4 75.63 59.98C76.21 60.56 76.32 60.77 76.32 61.41C76.32 62.21 75.81 63.22 75.3 63.42C74.56 63.72 74.08 63.79 73.51 63.67ZM15.42 58.05C14.91 57.86 9.88 51.17 7.3 47.25C3.69 41.77 1.77 37.35 0.7 32.07C-1.85 19.6 3.62 7.73 14.3 2.54C17.45 1.01 20.04 0.38 23.77 0.23C30.54 -0.03 36.17 2.13 40.8 6.75C42.65 8.6 44.66 11.4 45.45 13.22C45.69 13.76 45.93 14.19 45.99 14.16C46.05 14.14 46.47 13.41 46.93 12.54C48.11 10.28 49.46 8.48 51.42 6.58C57.6 0.58 66.33 -1.41 74.74 1.26C83.0 3.89 89.33 10.92 91.3 19.65C92.87 26.63 91.4 35.49 87.3 43.65C85.22 47.79 80.71 55.12 80.07 55.41C79.34 55.75 78.78 55.65 78.23 55.1C77.37 54.24 77.49 53.82 79.54 50.53C84.74 42.19 86.75 37.74 88.02 31.8C88.45 29.77 88.49 29.22 88.49 25.79C88.5 21.47 88.28 20.19 87.03 16.97C85.91 14.11 84.62 12.17 82.28 9.81C78.86 6.37 75.44 4.55 70.87 3.76C68.44 3.34 64.72 3.49 62.37 4.1C56.89 5.54 52.16 9.38 49.61 14.47C48.83 16.03 47.94 18.77 47.68 20.47C47.51 21.57 47.39 21.85 46.97 22.21C46.34 22.74 45.6 22.75 44.99 22.23C44.6 21.9 44.48 21.54 44.2 19.96C42.53 10.65 35.15 4.08 25.79 3.57C22.25 3.38 18.96 4.04 15.7 5.6C8.04 9.27 3.34 17.1 3.33 26.18L3.33 28.24L21.42 28.29L39.5 28.33L39.93 28.83C40.53 29.53 40.51 30.57 39.89 31.15L39.42 31.58L21.73 31.58C4.56 31.58 4.04 31.59 4.04 31.91C4.04 32.09 4.27 33.04 4.55 34.02C6.17 39.66 8.73 44.09 15.56 53.11C17.96 56.28 18.09 56.62 17.24 57.53C16.69 58.13 16.08 58.3 15.42 58.05Z"/></symbol>
+</svg>
+
 <!-- ============================ HEADER ============================ -->
 <header class="header" id="header">
-  <a class="brand" href="#top">
-    <b>Trintigon</b>
-    <span>Photography</span>
+  <a class="brand" href="#top" aria-label="Trintigon Photography — home">
+    <svg viewBox="0 0 91.93 100" class="mark brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+    <span class="brand__type">
+      <b>Trintigon</b>
+      <span>Photography</span>
+    </span>
   </a>
 
   <nav class="nav" id="nav">
@@ -491,6 +545,7 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
   </div>
 
   <div class="hero__inner">
+    <svg viewBox="0 0 91.93 100" class="mark hero__mark" aria-hidden="true"><use href="#mark"/></svg>
     <p class="eyebrow">Portrait · Landscape · Editorial</p>
     <h1 class="h-display">Light, held<br><em>still.</em></h1>
 
@@ -505,6 +560,7 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
 <section class="section" id="work">
   <div class="section__head reveal">
     <div>
+      <svg viewBox="0 0 91.93 100" class="mark head__mark" aria-hidden="true"><use href="#mark"/></svg>
       <span class="eyebrow">Selected Work</span>
       <h2 class="h-display">Portfolio</h2>
     </div>
@@ -526,61 +582,73 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
   <div class="grid" id="grid">
     <figure class="tile tile--wide reveal" data-cat="landscape" tabindex="0">
       <img src="https://picsum.photos/id/1018/1600/1100" alt="Valley in morning fog" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Landscape</span><b>Northern Range</b></figcaption>
     </figure>
 
     <figure class="tile tile--tall reveal" data-d="1" data-cat="portrait" tabindex="0">
       <img src="https://picsum.photos/id/1027/900/1350" alt="Portrait in window light" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Portrait</span><b>Window Light</b></figcaption>
     </figure>
 
     <figure class="tile reveal" data-cat="street" tabindex="0">
       <img src="https://picsum.photos/id/1071/900/1200" alt="Street scene at night" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Street</span><b>After Rain</b></figcaption>
     </figure>
 
     <figure class="tile reveal" data-d="1" data-cat="studio" tabindex="0">
       <img src="https://picsum.photos/id/1062/900/1200" alt="Studio still life" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Studio</span><b>Form No. 4</b></figcaption>
     </figure>
 
     <figure class="tile reveal" data-d="2" data-cat="portrait" tabindex="0">
       <img src="https://picsum.photos/id/823/900/1200" alt="Environmental portrait" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Portrait</span><b>Quiet Hours</b></figcaption>
     </figure>
 
     <figure class="tile tile--half reveal" data-cat="landscape" tabindex="0">
       <img src="https://picsum.photos/id/1043/1400/1050" alt="Coastline at dusk" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Landscape</span><b>Low Tide</b></figcaption>
     </figure>
 
     <figure class="tile tile--half reveal" data-d="1" data-cat="street" tabindex="0">
       <img src="https://picsum.photos/id/1057/1400/1050" alt="City crossing" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Street</span><b>Crossing</b></figcaption>
     </figure>
 
     <figure class="tile tile--tall reveal" data-cat="studio" tabindex="0">
       <img src="https://picsum.photos/id/1080/900/1350" alt="Studio composition" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Studio</span><b>Red Study</b></figcaption>
     </figure>
 
     <figure class="tile tile--wide reveal" data-d="1" data-cat="landscape" tabindex="0">
       <img src="https://picsum.photos/id/1019/1600/1100" alt="Forest ridge" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Landscape</span><b>Ridge Line</b></figcaption>
     </figure>
 
     <figure class="tile reveal" data-cat="portrait" tabindex="0">
       <img src="https://picsum.photos/id/64/900/1200" alt="Studio portrait" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Portrait</span><b>Study I</b></figcaption>
     </figure>
 
     <figure class="tile reveal" data-d="1" data-cat="street" tabindex="0">
       <img src="https://picsum.photos/id/1076/900/1200" alt="Alley in low light" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Street</span><b>Late Hour</b></figcaption>
     </figure>
 
     <figure class="tile reveal" data-d="2" data-cat="studio" tabindex="0">
       <img src="https://picsum.photos/id/1084/900/1200" alt="Editorial still" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Studio</span><b>Editorial No. 9</b></figcaption>
     </figure>
   </div>
@@ -679,7 +747,10 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
 
 <!-- ============================ FOOTER ============================ -->
 <footer class="footer">
-  <span>&copy; <span id="year">2026</span> Trintigon Photography</span>
+  <a class="footer__brand" href="#top">
+    <svg viewBox="0 0 91.93 100" class="mark footer__mark" aria-hidden="true"><use href="#mark"/></svg>
+    <span>&copy; <span id="year">2026</span> Trintigon Photography</span>
+  </a>
   <nav class="socials">
     <a href="#" rel="noopener">Instagram</a>
     <a href="#" rel="noopener">Behance</a>
@@ -690,6 +761,7 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
 
 <!-- ============================ LIGHTBOX ============================ -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <svg viewBox="0 0 91.93 100" class="mark lb-mark" aria-hidden="true"><use href="#mark"/></svg>
   <button class="lb-close" id="lbClose">Close</button>
   <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">&#8592;</button>
   <img id="lbImg" src="" alt="">
@@ -779,11 +851,13 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
   var open = function (tile) {
     show(visible().indexOf(tile));
     lb.classList.add("is-open");
+    document.body.classList.add("lb-open");
     document.body.style.overflow = "hidden";
   };
 
   var close = function () {
     lb.classList.remove("is-open");
+    document.body.classList.remove("lb-open");
     document.body.style.overflow = "";
   };
 
