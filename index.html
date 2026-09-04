@@ -306,30 +306,6 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
 .band:hover img{transform:scale(1.04)}
 
 /* ============================================================
-   ARCHIVE  (temporary review grid — delete this block with the section)
-   ============================================================ */
-.archive-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
-  gap:.7rem;
-}
-.arch{
-  position:relative;overflow:hidden;cursor:pointer;
-  aspect-ratio:1/1;background:var(--bg-raise);
-}
-.arch img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
-.arch:hover img{transform:scale(1.06)}
-.arch figcaption{
-  position:absolute;inset:auto 0 0 0;
-  padding:.5rem .6rem;
-  font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--ink);background:linear-gradient(to top,rgba(11,11,12,.9),transparent);
-  opacity:0;transition:opacity .4s var(--ease);
-}
-.arch:hover figcaption,.arch:focus-visible figcaption{opacity:1}
-.arch:focus-visible{outline:1px solid var(--accent);outline-offset:2px}
-
-/* ============================================================
    CONTACT
    ============================================================ */
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,6rem)}
@@ -531,7 +507,6 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   <nav class="nav" id="nav">
     <a href="#work">Work</a>
     <a href="#about">About</a>
-    <a href="#archive">Archive</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -767,223 +742,6 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   <img src="images/bando-20.jpg" alt="Manhattan skyline at sunset from the East River" loading="lazy">
 </section>
 
-<!-- ============================ ARCHIVE ============================
-     TEMPORARY. Everything from the Drive folder that is not placed on the
-     page. To remove: delete this section, the #archive nav link, and the
-     ARCHIVE css block. The files live in images/archive/.
-     ================================================================= -->
-<section class="section section--alt" id="archive">
-  <div class="section__head reveal">
-    <div>
-      <span class="eyebrow">Not placed — for review</span>
-      <h2 class="h-display">Archive</h2>
-    </div>
-  </div>
-
-  <div class="archive-grid" id="archiveGrid">
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/27535680_unknown.jpg" alt="27535680_unknown" loading="lazy">
-      <figcaption>27535680_unknown</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/27798816_unknown.jpg" alt="27798816_unknown" loading="lazy">
-      <figcaption>27798816_unknown</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-101.jpg" alt="bando-101" loading="lazy">
-      <figcaption>bando-101</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-105.jpg" alt="bando-105" loading="lazy">
-      <figcaption>bando-105</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-23.jpg" alt="bando-23" loading="lazy">
-      <figcaption>bando-23</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-35.jpg" alt="bando-35" loading="lazy">
-      <figcaption>bando-35</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-36.jpg" alt="bando-36" loading="lazy">
-      <figcaption>bando-36</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-39.jpg" alt="bando-39" loading="lazy">
-      <figcaption>bando-39</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-46.jpg" alt="bando-46" loading="lazy">
-      <figcaption>bando-46</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-50.jpg" alt="bando-50" loading="lazy">
-      <figcaption>bando-50</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-52.jpg" alt="bando-52" loading="lazy">
-      <figcaption>bando-52</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-53.jpg" alt="bando-53" loading="lazy">
-      <figcaption>bando-53</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-54.jpg" alt="bando-54" loading="lazy">
-      <figcaption>bando-54</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-56.jpg" alt="bando-56" loading="lazy">
-      <figcaption>bando-56</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-93.jpg" alt="bando-93" loading="lazy">
-      <figcaption>bando-93</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-94.jpg" alt="bando-94" loading="lazy">
-      <figcaption>bando-94</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-95.jpg" alt="bando-95" loading="lazy">
-      <figcaption>bando-95</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-96.jpg" alt="bando-96" loading="lazy">
-      <figcaption>bando-96</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/bando-98.jpg" alt="bando-98" loading="lazy">
-      <figcaption>bando-98</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/cairn-stones.jpg" alt="cairn-stones" loading="lazy">
-      <figcaption>cairn-stones</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/eli_2456.jpg" alt="eli_2456" loading="lazy">
-      <figcaption>eli_2456</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/eli_3090.jpg" alt="eli_3090" loading="lazy">
-      <figcaption>eli_3090</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/eli_3182.jpg" alt="eli_3182" loading="lazy">
-      <figcaption>eli_3182</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/eli_3199.jpg" alt="eli_3199" loading="lazy">
-      <figcaption>eli_3199</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/eli_3285.jpg" alt="eli_3285" loading="lazy">
-      <figcaption>eli_3285</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/flag-rally.jpg" alt="flag-rally" loading="lazy">
-      <figcaption>flag-rally</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/flare-smoke.jpg" alt="flare-smoke" loading="lazy">
-      <figcaption>flare-smoke</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/illuminated-crowd.jpg" alt="illuminated-crowd" loading="lazy">
-      <figcaption>illuminated-crowd</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_0152.jpg" alt="img_0152" loading="lazy">
-      <figcaption>img_0152</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_0470.jpg" alt="img_0470" loading="lazy">
-      <figcaption>img_0470</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_0474.jpg" alt="img_0474" loading="lazy">
-      <figcaption>img_0474</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_0730.jpg" alt="img_0730" loading="lazy">
-      <figcaption>img_0730</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_0731.jpg" alt="img_0731" loading="lazy">
-      <figcaption>img_0731</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_1501.jpg" alt="img_1501" loading="lazy">
-      <figcaption>img_1501</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_1502.jpg" alt="img_1502" loading="lazy">
-      <figcaption>img_1502</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/jesus-18.jpg" alt="jesus-18" loading="lazy">
-      <figcaption>jesus-18</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/jesus-2.jpg" alt="jesus-2" loading="lazy">
-      <figcaption>jesus-2</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/jesus-25.jpg" alt="jesus-25" loading="lazy">
-      <figcaption>jesus-25</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/jesus-3.jpg" alt="jesus-3" loading="lazy">
-      <figcaption>jesus-3</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/jesus-4.jpg" alt="jesus-4" loading="lazy">
-      <figcaption>jesus-4</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/jesus-5.jpg" alt="jesus-5" loading="lazy">
-      <figcaption>jesus-5</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/jesus-8.jpg" alt="jesus-8" loading="lazy">
-      <figcaption>jesus-8</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/march-signs.jpg" alt="march-signs" loading="lazy">
-      <figcaption>march-signs</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/milky-way.jpg" alt="milky-way" loading="lazy">
-      <figcaption>milky-way</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/monument-march.jpg" alt="monument-march" loading="lazy">
-      <figcaption>monument-march</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/neon-sign.jpg" alt="neon-sign" loading="lazy">
-      <figcaption>neon-sign</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/night-sparklers.jpg" alt="night-sparklers" loading="lazy">
-      <figcaption>night-sparklers</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/sparkler-streaks.jpg" alt="sparkler-streaks" loading="lazy">
-      <figcaption>sparkler-streaks</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/train-passenger.jpg" alt="train-passenger" loading="lazy">
-      <figcaption>train-passenger</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/woodland-trail.jpg" alt="woodland-trail" loading="lazy">
-      <figcaption>woodland-trail</figcaption>
-    </figure>
-  </div>
-</section>
-
 <!-- ============================ CONTACT ============================ -->
 <section class="section" id="contact">
   <div class="contact">
@@ -1086,8 +844,6 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   /* ---------- gallery filtering ---------- */
   var grids = Array.prototype.slice.call(document.querySelectorAll("#groups .grid"));
   var tiles = Array.prototype.slice.call(document.querySelectorAll("#groups .tile"));
-  var archive = Array.prototype.slice.call(document.querySelectorAll("#archiveGrid .arch"));
-  var group = tiles;
   document.getElementById("filters").addEventListener("click", function (e) {
     var btn = e.target.closest("button");
     if (!btn) return;
@@ -1109,9 +865,9 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   var index = 0;
 
   var visible = function () {
-    return group.filter(function (t) {
+    return tiles.filter(function (t) {
       var g = t.closest(".grid");
-      return !t.classList.contains("is-hidden") && !(g && g.classList.contains("is-hidden"));
+      return !(g && g.classList.contains("is-hidden"));
     });
   };
 
@@ -1125,8 +881,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
     lbCount.textContent = ("0" + (index + 1)).slice(-2) + " / " + ("0" + list.length).slice(-2);
   };
 
-  var open = function (tile, list) {
-    group = list || tiles;
+  var open = function (tile) {
     show(visible().indexOf(tile));
     lb.classList.add("is-open");
     document.body.classList.add("lb-open");
@@ -1139,12 +894,10 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
     document.body.style.overflow = "";
   };
 
-  [[tiles, tiles], [archive, archive]].forEach(function (pair) {
-    pair[0].forEach(function (tile) {
-      tile.addEventListener("click", function () { open(tile, pair[1]); });
-      tile.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(tile, pair[1]); }
-      });
+  tiles.forEach(function (tile) {
+    tile.addEventListener("click", function () { open(tile); });
+    tile.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(tile); }
     });
   });
 
