@@ -52,6 +52,7 @@ body{
   overflow-x:hidden;
 }
 img{display:block;max-width:100%}
+figure{margin:0}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
@@ -236,8 +237,9 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
   transition:opacity .55s var(--ease),transform .55s var(--ease),filter .55s var(--ease);
 }
 .tile--wide{grid-column:span 8;aspect-ratio:3/2}
+.tile--sq{grid-column:span 4;aspect-ratio:1/1}
 .tile--tall{grid-column:span 4;aspect-ratio:2/3}
-.tile--half{grid-column:span 6;aspect-ratio:4/3}
+.tile--half{grid-column:span 6;aspect-ratio:3/2}
 
 .tile img{
   width:100%;height:100%;object-fit:cover;
@@ -272,7 +274,7 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
 }
 .split__media{position:relative}
 .split__media img{
-  width:100%;aspect-ratio:4/5;object-fit:cover;
+  width:100%;aspect-ratio:3/2;object-fit:cover;
 }
 .split h2{font-size:clamp(1.9rem,4.4vw,3.2rem);margin-bottom:1.6rem}
 .placeholder{
@@ -298,6 +300,30 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
   transition:transform 1.6s var(--ease);
 }
 .band:hover img{transform:scale(1.04)}
+
+/* ============================================================
+   ARCHIVE  (temporary review grid — delete this block with the section)
+   ============================================================ */
+.archive-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(190px,1fr));
+  gap:.7rem;
+}
+.arch{
+  position:relative;overflow:hidden;cursor:pointer;
+  aspect-ratio:1/1;background:var(--bg-raise);
+}
+.arch img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.arch:hover img{transform:scale(1.06)}
+.arch figcaption{
+  position:absolute;inset:auto 0 0 0;
+  padding:.5rem .6rem;
+  font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink);background:linear-gradient(to top,rgba(11,11,12,.9),transparent);
+  opacity:0;transition:opacity .4s var(--ease);
+}
+.arch:hover figcaption,.arch:focus-visible figcaption{opacity:1}
+.arch:focus-visible{outline:1px solid var(--accent);outline-offset:2px}
 
 /* ============================================================
    CONTACT
@@ -501,6 +527,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   <nav class="nav" id="nav">
     <a href="#work">Work</a>
     <a href="#about">About</a>
+    <a href="#archive">Archive</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -512,8 +539,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
 <!-- ============================ HERO ============================ -->
 <section class="hero" id="top">
   <div class="hero__media">
-    <!-- Swap this src for your own hero photograph -->
-    <img src="https://picsum.photos/id/1015/2400/1400" alt="Mountain river at dusk">
+    <img src="images/jesus-17.jpg" alt="Starlings over the Washington Monument at dusk">
   </div>
 
   <div class="hero__inner">
@@ -538,90 +564,108 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
     </div>
     <div class="filters" id="filters">
       <button class="is-active" data-filter="all">All</button>
+      <button data-filter="street">Street</button>
       <button data-filter="portrait">Portrait</button>
       <button data-filter="landscape">Landscape</button>
-      <button data-filter="street">Street</button>
-      <button data-filter="studio">Studio</button>
+      <button data-filter="travel">Travel</button>
     </div>
   </div>
 
-  <!--
-    To use your own photographs: drop them in an /images folder and replace each
-    src below (e.g. src="images/portrait-01.jpg"). Keep the data-cat value to
-    match a filter, and rename the <figcaption> title. Add or remove tiles freely —
-    tile--wide, tile--half and tile--tall control the size within the grid.
-  -->
   <div class="grid" id="grid">
-    <figure class="tile tile--wide reveal" data-cat="landscape" tabindex="0">
-      <img src="https://picsum.photos/id/1018/1600/1100" alt="Valley in morning fog" loading="lazy">
+    <figure class="tile tile--wide reveal" data-cat="travel" tabindex="0">
+      <img src="images/eli_3066.jpg" alt="Torii gates at Fushimi Inari" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Landscape</span><b>No. 01</b></figcaption>
+      <figcaption><span>Travel</span><b>No. 01</b></figcaption>
     </figure>
 
     <figure class="tile tile--tall reveal" data-d="1" data-cat="portrait" tabindex="0">
-      <img src="https://picsum.photos/id/1027/900/1350" alt="Portrait in window light" loading="lazy">
+      <img src="images/eli_3552.jpg" alt="Passenger at a train window" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Portrait</span><b>No. 02</b></figcaption>
     </figure>
 
-    <figure class="tile reveal" data-cat="street" tabindex="0">
-      <img src="https://picsum.photos/id/1071/900/1200" alt="Street scene at night" loading="lazy">
+    <figure class="tile tile--sq reveal" data-d="2" data-cat="travel" tabindex="0">
+      <img src="images/eli_3165.jpg" alt="Mount Fuji at sunset from the train" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Street</span><b>No. 03</b></figcaption>
+      <figcaption><span>Travel</span><b>No. 03</b></figcaption>
     </figure>
 
-    <figure class="tile reveal" data-d="1" data-cat="studio" tabindex="0">
-      <img src="https://picsum.photos/id/1062/900/1200" alt="Studio still life" loading="lazy">
+    <figure class="tile tile--sq reveal" data-cat="travel" tabindex="0">
+      <img src="images/eli_3182.jpg" alt="Koi in a temple pond" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Studio</span><b>No. 04</b></figcaption>
+      <figcaption><span>Travel</span><b>No. 04</b></figcaption>
     </figure>
 
-    <figure class="tile reveal" data-d="2" data-cat="portrait" tabindex="0">
-      <img src="https://picsum.photos/id/823/900/1200" alt="Environmental portrait" loading="lazy">
+    <figure class="tile tile--tall reveal" data-d="1" data-cat="portrait" tabindex="0">
+      <img src="images/jesus-26.jpg" alt="Watching the ducks on a red reflecting pool" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Portrait</span><b>No. 05</b></figcaption>
     </figure>
 
-    <figure class="tile tile--half reveal" data-cat="landscape" tabindex="0">
-      <img src="https://picsum.photos/id/1043/1400/1050" alt="Coastline at dusk" loading="lazy">
+    <figure class="tile tile--half reveal" data-d="2" data-cat="street" tabindex="0">
+      <img src="images/bando-19.jpg" alt="Steam rising over a Manhattan crossing" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Landscape</span><b>No. 06</b></figcaption>
+      <figcaption><span>Street</span><b>No. 06</b></figcaption>
     </figure>
 
-    <figure class="tile tile--half reveal" data-d="1" data-cat="street" tabindex="0">
-      <img src="https://picsum.photos/id/1057/1400/1050" alt="City crossing" loading="lazy">
+    <figure class="tile tile--half reveal" data-cat="street" tabindex="0">
+      <img src="images/bando-18.jpg" alt="Crowd under the Canal Street signs" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Street</span><b>No. 07</b></figcaption>
     </figure>
 
-    <figure class="tile tile--tall reveal" data-cat="studio" tabindex="0">
-      <img src="https://picsum.photos/id/1080/900/1350" alt="Studio composition" loading="lazy">
+    <figure class="tile tile--tall reveal" data-d="1" data-cat="portrait" tabindex="0">
+      <img src="images/bando-97.jpg" alt="Standing out on the rocks" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Studio</span><b>No. 08</b></figcaption>
+      <figcaption><span>Portrait</span><b>No. 08</b></figcaption>
     </figure>
 
-    <figure class="tile tile--wide reveal" data-d="1" data-cat="landscape" tabindex="0">
-      <img src="https://picsum.photos/id/1019/1600/1100" alt="Forest ridge" loading="lazy">
+    <figure class="tile tile--wide reveal" data-d="2" data-cat="landscape" tabindex="0">
+      <img src="images/jesus-12.jpg" alt="The Washington Monument at sunset" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Landscape</span><b>No. 09</b></figcaption>
     </figure>
 
-    <figure class="tile reveal" data-cat="portrait" tabindex="0">
-      <img src="https://picsum.photos/id/64/900/1200" alt="Studio portrait" loading="lazy">
+    <figure class="tile tile--sq reveal" data-cat="street" tabindex="0">
+      <img src="images/eli_6638.jpg" alt="Skateboard on a shop front" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Portrait</span><b>No. 10</b></figcaption>
+      <figcaption><span>Street</span><b>No. 10</b></figcaption>
     </figure>
 
-    <figure class="tile reveal" data-d="1" data-cat="street" tabindex="0">
-      <img src="https://picsum.photos/id/1076/900/1200" alt="Alley in low light" loading="lazy">
+    <figure class="tile tile--tall reveal" data-d="1" data-cat="street" tabindex="0">
+      <img src="images/bando-22.jpg" alt="Flag mural behind a parked truck" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
       <figcaption><span>Street</span><b>No. 11</b></figcaption>
     </figure>
 
-    <figure class="tile reveal" data-d="2" data-cat="studio" tabindex="0">
-      <img src="https://picsum.photos/id/1084/900/1200" alt="Editorial still" loading="lazy">
+    <figure class="tile tile--sq reveal" data-d="2" data-cat="landscape" tabindex="0">
+      <img src="images/jesus-2.jpg" alt="Moon over an autumn ridge" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Studio</span><b>No. 12</b></figcaption>
+      <figcaption><span>Landscape</span><b>No. 12</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-cat="landscape" tabindex="0">
+      <img src="images/bando-53.jpg" alt="A car among the pines at dusk" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Landscape</span><b>No. 13</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-d="1" data-cat="landscape" tabindex="0">
+      <img src="images/jesus-5.jpg" alt="Low sun through autumn woods" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Landscape</span><b>No. 14</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--wide reveal" data-d="2" data-cat="street" tabindex="0">
+      <img src="images/bando-23.jpg" alt="Birds over the gantries" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Street</span><b>No. 15</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--tall reveal" data-cat="portrait" tabindex="0">
+      <img src="images/eli_6598.jpg" alt="Silhouette at the shoreline" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Portrait</span><b>No. 16</b></figcaption>
     </figure>
   </div>
 </section>
@@ -630,7 +674,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
 <section class="section section--alt" id="about">
   <div class="split">
     <div class="split__media reveal">
-      <img src="https://picsum.photos/id/338/1000/1250" alt="Elijah Lange" loading="lazy">
+      <img src="images/bando-92.jpg" alt="Elijah Lange, reflected in a wing mirror" loading="lazy">
     </div>
 
     <div class="reveal" data-d="1">
@@ -645,7 +689,164 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
 
 <!-- ============================ FULL-BLEED FRAME ============================ -->
 <section class="band">
-  <img src="https://picsum.photos/id/1039/2400/1200" alt="" loading="lazy">
+  <img src="images/bando-20.jpg" alt="Manhattan skyline at sunset from the East River" loading="lazy">
+</section>
+
+<!-- ============================ ARCHIVE ============================
+     TEMPORARY. Everything from the Drive folder that is not placed on the
+     page. To remove: delete this section, the #archive nav link, and the
+     ARCHIVE css block. The files live in images/archive/.
+     ================================================================= -->
+<section class="section section--alt" id="archive">
+  <div class="section__head reveal">
+    <div>
+      <span class="eyebrow">Not placed — for review</span>
+      <h2 class="h-display">Archive</h2>
+    </div>
+  </div>
+
+  <div class="archive-grid" id="archiveGrid">
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/27535680_unknown.jpg" alt="27535680_unknown" loading="lazy">
+      <figcaption>27535680_unknown</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/27798816_unknown.jpg" alt="27798816_unknown" loading="lazy">
+      <figcaption>27798816_unknown</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_2456.jpg" alt="eli_2456" loading="lazy">
+      <figcaption>eli_2456</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_3090.jpg" alt="eli_3090" loading="lazy">
+      <figcaption>eli_3090</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_3199.jpg" alt="eli_3199" loading="lazy">
+      <figcaption>eli_3199</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_3285.jpg" alt="eli_3285" loading="lazy">
+      <figcaption>eli_3285</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_3597.jpg" alt="eli_3597" loading="lazy">
+      <figcaption>eli_3597</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_0470.jpg" alt="img_0470" loading="lazy">
+      <figcaption>img_0470</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_0474.jpg" alt="img_0474" loading="lazy">
+      <figcaption>img_0474</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_0730.jpg" alt="img_0730" loading="lazy">
+      <figcaption>img_0730</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_0731.jpg" alt="img_0731" loading="lazy">
+      <figcaption>img_0731</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_1501.jpg" alt="img_1501" loading="lazy">
+      <figcaption>img_1501</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_1502.jpg" alt="img_1502" loading="lazy">
+      <figcaption>img_1502</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-101.jpg" alt="bando-101" loading="lazy">
+      <figcaption>bando-101</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-105.jpg" alt="bando-105" loading="lazy">
+      <figcaption>bando-105</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-35.jpg" alt="bando-35" loading="lazy">
+      <figcaption>bando-35</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-36.jpg" alt="bando-36" loading="lazy">
+      <figcaption>bando-36</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-39.jpg" alt="bando-39" loading="lazy">
+      <figcaption>bando-39</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-45.jpg" alt="bando-45" loading="lazy">
+      <figcaption>bando-45</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-46.jpg" alt="bando-46" loading="lazy">
+      <figcaption>bando-46</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-50.jpg" alt="bando-50" loading="lazy">
+      <figcaption>bando-50</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-52.jpg" alt="bando-52" loading="lazy">
+      <figcaption>bando-52</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-54.jpg" alt="bando-54" loading="lazy">
+      <figcaption>bando-54</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-56.jpg" alt="bando-56" loading="lazy">
+      <figcaption>bando-56</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-59.jpg" alt="bando-59" loading="lazy">
+      <figcaption>bando-59</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-93.jpg" alt="bando-93" loading="lazy">
+      <figcaption>bando-93</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-94.jpg" alt="bando-94" loading="lazy">
+      <figcaption>bando-94</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-95.jpg" alt="bando-95" loading="lazy">
+      <figcaption>bando-95</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-96.jpg" alt="bando-96" loading="lazy">
+      <figcaption>bando-96</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-98.jpg" alt="bando-98" loading="lazy">
+      <figcaption>bando-98</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/jesus-18.jpg" alt="jesus-18" loading="lazy">
+      <figcaption>jesus-18</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/jesus-25.jpg" alt="jesus-25" loading="lazy">
+      <figcaption>jesus-25</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/jesus-3.jpg" alt="jesus-3" loading="lazy">
+      <figcaption>jesus-3</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/jesus-4.jpg" alt="jesus-4" loading="lazy">
+      <figcaption>jesus-4</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/jesus-8.jpg" alt="jesus-8" loading="lazy">
+      <figcaption>jesus-8</figcaption>
+    </figure>
+  </div>
 </section>
 
 <!-- ============================ CONTACT ============================ -->
@@ -748,7 +949,9 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   }
 
   /* ---------- gallery filtering ---------- */
-  var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
+  var tiles = Array.prototype.slice.call(document.querySelectorAll("#grid .tile"));
+  var archive = Array.prototype.slice.call(document.querySelectorAll("#archiveGrid .arch"));
+  var group = tiles;
   document.getElementById("filters").addEventListener("click", function (e) {
     var btn = e.target.closest("button");
     if (!btn) return;
@@ -770,7 +973,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   var index = 0;
 
   var visible = function () {
-    return tiles.filter(function (t) { return !t.classList.contains("is-hidden"); });
+    return group.filter(function (t) { return !t.classList.contains("is-hidden"); });
   };
 
   var show = function (i) {
@@ -783,7 +986,8 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
     lbCount.textContent = ("0" + (index + 1)).slice(-2) + " / " + ("0" + list.length).slice(-2);
   };
 
-  var open = function (tile) {
+  var open = function (tile, list) {
+    group = list || tiles;
     show(visible().indexOf(tile));
     lb.classList.add("is-open");
     document.body.classList.add("lb-open");
@@ -796,10 +1000,12 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
     document.body.style.overflow = "";
   };
 
-  tiles.forEach(function (tile) {
-    tile.addEventListener("click", function () { open(tile); });
-    tile.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(tile); }
+  [[tiles, tiles], [archive, archive]].forEach(function (pair) {
+    pair[0].forEach(function (tile) {
+      tile.addEventListener("click", function () { open(tile, pair[1]); });
+      tile.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(tile, pair[1]); }
+      });
     });
   });
 
