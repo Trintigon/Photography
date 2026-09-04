@@ -1,8 +1,19 @@
 # Pending uploads
 
 Files from the **Portfolio Claude Link** Drive folder that are not yet in this
-repo. The Drive connector caps a download at roughly 6.1 MB, so these 37 could
-not be fetched automatically and need uploading by hand.
+repo. The Drive connector cannot return a file larger than about **6.4 MB**, so
+these 36 could not be fetched and need uploading by hand.
+
+Measured boundary, after repeated retries:
+
+| File | Size | Result |
+| --- | --- | --- |
+| `IMG_0152.PNG` | 6,298,848 bytes | succeeded (8,398,565 chars returned) |
+| `ELI_8110.jpg` | 6,477,551 bytes | failed on 3 separate attempts |
+
+An oversized request drops the connector session, which is why the failure
+reads as "session expired" rather than a size error. Retrying does not help:
+every file below is above the ceiling.
 
 **Where they go:** `images/archive/` on `main`, as the untouched originals.
 Do not resize them first — resizing, EXIF stripping and JPEG encoding happen
@@ -10,13 +21,13 @@ after upload, so they match the 54 already on the site.
 
 ## How to select them without reading filenames
 
-The downloads failed on exactly the files above ~6.1 MB, so sorting by size
-splits the folder cleanly — everything at or above 6.3 MB is missing, and
-everything at or below 6.06 MB is already on the site. There is no overlap.
+The downloads failed on exactly the files above ~6.4 MB, so sorting by size
+splits the folder cleanly — everything at or above 6.48 MB is missing, and
+everything at or below 6.30 MB is already on the site. There is no overlap.
 
 1. Open the **Portfolio Claude Link** folder in Drive
 2. Switch to list view and click the **File size** column to sort largest first
-3. Select from the top down to and including `IMG_0152.PNG` (6.3 MB) — 42 files
+3. Select from the top down to and including `ELI_8110.jpg` (6.48 MB) — 41 files
 4. Drag the lot into `images/archive/`
 
 Upload all 42 without filtering. Five are not needed — 3 `.NEF` raw files and
@@ -26,7 +37,7 @@ uploader; let them fail and carry on.
 
 ## Quick check
 
-`images/archive/` holds **35** files today. It should hold **72** once all 37
+`images/archive/` holds **36** files today. It should hold **72** once all 36
 below are in. The count on the folder page tells you how far along you are
 without reading a single filename.
 
@@ -70,7 +81,6 @@ without reading a single filename.
 | 34 | `ELI_8258.jpg` | 6.8 MB | [ ] |
 | 35 | `ELI_2717.jpg` | 6.6 MB | [ ] |
 | 36 | `ELI_8110.jpg` | 6.5 MB | [ ] |
-| 37 | `IMG_0152.PNG` | 6.3 MB | [ ] |
 
 ## Notes
 
