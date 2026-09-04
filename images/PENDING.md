@@ -8,6 +8,22 @@ not be fetched automatically and need uploading by hand.
 Do not resize them first — resizing, EXIF stripping and JPEG encoding happen
 after upload, so they match the 54 already on the site.
 
+## How to select them without reading filenames
+
+The downloads failed on exactly the files above ~6.1 MB, so sorting by size
+splits the folder cleanly — everything at or above 6.3 MB is missing, and
+everything at or below 6.06 MB is already on the site. There is no overlap.
+
+1. Open the **Portfolio Claude Link** folder in Drive
+2. Switch to list view and click the **File size** column to sort largest first
+3. Select from the top down to and including `IMG_0152.PNG` (6.3 MB) — 42 files
+4. Drag the lot into `images/archive/`
+
+Upload all 42 without filtering. Five are not needed — 3 `.NEF` raw files and
+2 duplicates — but they are harmless and get dropped during processing. The two
+files over 25 MB (`ELI_3302.jpg` and `ELI_7236.NEF`) will be rejected by the web
+uploader; let them fail and carry on.
+
 ## Quick check
 
 `images/archive/` holds **35** files today. It should hold **72** once all 37
