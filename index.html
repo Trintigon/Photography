@@ -565,162 +565,150 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
     </div>
     <div class="filters" id="filters">
       <button class="is-active" data-filter="all">All</button>
-      <button data-filter="street">Street</button>
-      <button data-filter="portrait">Portrait</button>
-      <button data-filter="landscape">Landscape</button>
-      <button data-filter="travel">Travel</button>
+      <button data-filter="japan">Japan</button>
+      <button data-filter="city">City</button>
+      <button data-filter="land">Land</button>
+      <button data-filter="people">People</button>
     </div>
   </div>
 
   <div class="grid" id="grid">
-    <figure class="tile tile--full reveal" data-cat="street" tabindex="0">
-      <img src="images/monks-procession.jpg" alt="Monks moving through a crowd, panned" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Street</span><b>No. 01</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--wide reveal" data-cat="travel" tabindex="0">
-      <img src="images/eli_3066.jpg" alt="Torii gates at Fushimi Inari" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Travel</span><b>No. 02</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--tall reveal" data-d="1" data-cat="portrait" tabindex="0">
-      <img src="images/eli_3552.jpg" alt="Passenger at a train window" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Portrait</span><b>No. 03</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--sq reveal" data-d="2" data-cat="travel" tabindex="0">
-      <img src="images/eli_3165.jpg" alt="Mount Fuji at sunset from the train" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Travel</span><b>No. 04</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--sq reveal" data-cat="travel" tabindex="0">
-      <img src="images/eli_3182.jpg" alt="Koi in a temple pond" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Travel</span><b>No. 05</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--tall reveal" data-d="1" data-cat="portrait" tabindex="0">
-      <img src="images/jesus-26.jpg" alt="Watching the ducks on a red reflecting pool" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Portrait</span><b>No. 06</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--half reveal" data-d="2" data-cat="street" tabindex="0">
-      <img src="images/bando-19.jpg" alt="Steam rising over a Manhattan crossing" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Street</span><b>No. 07</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--half reveal" data-cat="street" tabindex="0">
-      <img src="images/bando-18.jpg" alt="Crowd under the Canal Street signs" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Street</span><b>No. 08</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--tall reveal" data-d="1" data-cat="portrait" tabindex="0">
-      <img src="images/bando-97.jpg" alt="Standing out on the rocks" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Portrait</span><b>No. 09</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--wide reveal" data-d="2" data-cat="landscape" tabindex="0">
-      <img src="images/jesus-12.jpg" alt="The Washington Monument at sunset" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Landscape</span><b>No. 10</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--sq reveal" data-cat="street" tabindex="0">
-      <img src="images/eli_6638.jpg" alt="Skateboard on a shop front" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Street</span><b>No. 11</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--tall reveal" data-d="1" data-cat="street" tabindex="0">
-      <img src="images/bando-22.jpg" alt="Flag mural behind a parked truck" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Street</span><b>No. 12</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--sq reveal" data-d="2" data-cat="landscape" tabindex="0">
-      <img src="images/jesus-2.jpg" alt="Moon over an autumn ridge" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Landscape</span><b>No. 13</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--half reveal" data-cat="landscape" tabindex="0">
-      <img src="images/bando-53.jpg" alt="A car among the pines at dusk" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Landscape</span><b>No. 14</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--half reveal" data-d="1" data-cat="landscape" tabindex="0">
-      <img src="images/jesus-5.jpg" alt="Low sun through autumn woods" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Landscape</span><b>No. 15</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--wide reveal" data-d="2" data-cat="street" tabindex="0">
-      <img src="images/bando-23.jpg" alt="Birds over the gantries" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Street</span><b>No. 16</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--tall reveal" data-cat="portrait" tabindex="0">
-      <img src="images/eli_6598.jpg" alt="Silhouette at the shoreline" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Portrait</span><b>No. 17</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--half reveal" data-cat="portrait" tabindex="0">
-      <img src="images/sparkler-night.jpg" alt="Lighting a flare after dark" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Portrait</span><b>No. 18</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--half reveal" data-d="1" data-cat="landscape" tabindex="0">
-      <img src="images/cairn-stones.jpg" alt="A cairn on a boulder above the shingle" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Landscape</span><b>No. 19</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--half reveal" data-cat="travel" tabindex="0">
-      <img src="images/illuminated-crowd.jpg" alt="Cast figures against a glass facade" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Travel</span><b>No. 20</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--half reveal" data-d="1" data-cat="landscape" tabindex="0">
-      <img src="images/garden-dusk.jpg" alt="A city garden going over at dusk" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Landscape</span><b>No. 21</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--half reveal" data-cat="street" tabindex="0">
-      <img src="images/monument-march.jpg" alt="A march at the Washington Monument" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Street</span><b>No. 22</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--half reveal" data-d="1" data-cat="landscape" tabindex="0">
-      <img src="images/egret-shallows.jpg" alt="An egret hunting the shallows" loading="lazy">
-      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Landscape</span><b>No. 23</b></figcaption>
-    </figure>
-
-    <figure class="tile tile--wide reveal" data-cat="travel" tabindex="0">
+    <figure class="tile tile--wide reveal" data-cat="japan" tabindex="0">
       <img src="images/torii-clouds.jpg" alt="A torii gate above the cloud line" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Travel</span><b>No. 24</b></figcaption>
+      <figcaption><span>Japan</span><b>No. 01</b></figcaption>
     </figure>
 
-    <figure class="tile tile--sq reveal" data-d="1" data-cat="travel" tabindex="0">
+    <figure class="tile tile--tall reveal" data-d="1" data-cat="japan" tabindex="0">
+      <img src="images/eli_3552.jpg" alt="A passenger at the train window" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Japan</span><b>No. 02</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--sq reveal" data-d="2" data-cat="japan" tabindex="0">
+      <img src="images/eli_3165.jpg" alt="Mount Fuji at sunset from the train" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Japan</span><b>No. 03</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--sq reveal" data-cat="japan" tabindex="0">
+      <img src="images/eli_3182.jpg" alt="Koi in a temple pond" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Japan</span><b>No. 04</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--sq reveal" data-d="1" data-cat="japan" tabindex="0">
       <img src="images/forest-sign.jpg" alt="A roadside sign against the treeline" loading="lazy">
       <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-      <figcaption><span>Travel</span><b>No. 25</b></figcaption>
+      <figcaption><span>Japan</span><b>No. 05</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-d="2" data-cat="japan" tabindex="0">
+      <img src="images/eli_3066.jpg" alt="Torii gates at Fushimi Inari" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Japan</span><b>No. 06</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-cat="japan" tabindex="0">
+      <img src="images/fuji-scree.jpg" alt="Cloud moving across the volcanic slope" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Japan</span><b>No. 07</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--full reveal" data-d="1" data-cat="city" tabindex="0">
+      <img src="images/monks-procession.jpg" alt="Monks moving through a crowd, panned" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>City</span><b>No. 08</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-d="2" data-cat="city" tabindex="0">
+      <img src="images/bando-19.jpg" alt="Steam rising over a Manhattan crossing" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>City</span><b>No. 09</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-cat="city" tabindex="0">
+      <img src="images/bando-18.jpg" alt="Crowd under the Canal Street signs" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>City</span><b>No. 10</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--wide reveal" data-d="1" data-cat="city" tabindex="0">
+      <img src="images/bando-23.jpg" alt="Birds over the gantries" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>City</span><b>No. 11</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--tall reveal" data-d="2" data-cat="city" tabindex="0">
+      <img src="images/bando-22.jpg" alt="Flag mural behind a parked truck" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>City</span><b>No. 12</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-cat="city" tabindex="0">
+      <img src="images/illuminated-crowd.jpg" alt="Cast figures against a glass facade" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>City</span><b>No. 13</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-d="1" data-cat="city" tabindex="0">
+      <img src="images/jesus-12.jpg" alt="The Washington Monument at sunset" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>City</span><b>No. 14</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-d="2" data-cat="land" tabindex="0">
+      <img src="images/jesus-5.jpg" alt="Low sun through autumn woods" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Land</span><b>No. 15</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-cat="land" tabindex="0">
+      <img src="images/garden-dusk.jpg" alt="A city garden going over at dusk" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Land</span><b>No. 16</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-d="1" data-cat="land" tabindex="0">
+      <img src="images/river-rapids.jpg" alt="A boulder standing in the rapids" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Land</span><b>No. 17</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-d="2" data-cat="land" tabindex="0">
+      <img src="images/egret-shallows.jpg" alt="An egret hunting the shallows" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>Land</span><b>No. 18</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--tall reveal" data-cat="people" tabindex="0">
+      <img src="images/jesus-26.jpg" alt="Watching the ducks on a red reflecting pool" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>People</span><b>No. 19</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--tall reveal" data-d="1" data-cat="people" tabindex="0">
+      <img src="images/bando-97.jpg" alt="Standing out on the rocks" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>People</span><b>No. 20</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--tall reveal" data-d="2" data-cat="people" tabindex="0">
+      <img src="images/eli_6598.jpg" alt="Silhouette at the shoreline" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>People</span><b>No. 21</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-cat="people" tabindex="0">
+      <img src="images/sparkler-night.jpg" alt="Lighting a flare after dark" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>People</span><b>No. 22</b></figcaption>
+    </figure>
+
+    <figure class="tile tile--half reveal" data-d="1" data-cat="people" tabindex="0">
+      <img src="images/cliff-figure.jpg" alt="Sitting out on the ice plant above the sea" loading="lazy">
+      <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <figcaption><span>People</span><b>No. 23</b></figcaption>
     </figure>
   </div>
 </section>
@@ -770,78 +758,6 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
       <figcaption>27798816_unknown</figcaption>
     </figure>
     <figure class="arch" tabindex="0">
-      <img src="images/archive/eli_2456.jpg" alt="eli_2456" loading="lazy">
-      <figcaption>eli_2456</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/eli_3090.jpg" alt="eli_3090" loading="lazy">
-      <figcaption>eli_3090</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/eli_3199.jpg" alt="eli_3199" loading="lazy">
-      <figcaption>eli_3199</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/eli_3285.jpg" alt="eli_3285" loading="lazy">
-      <figcaption>eli_3285</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/eli_3597.jpg" alt="eli_3597" loading="lazy">
-      <figcaption>eli_3597</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/night-sparklers.jpg" alt="night-sparklers" loading="lazy">
-      <figcaption>night-sparklers</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/sparkler-streaks.jpg" alt="sparkler-streaks" loading="lazy">
-      <figcaption>sparkler-streaks</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/woodland-trail.jpg" alt="woodland-trail" loading="lazy">
-      <figcaption>woodland-trail</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/flare-smoke.jpg" alt="flare-smoke" loading="lazy">
-      <figcaption>flare-smoke</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_0152.jpg" alt="img_0152" loading="lazy">
-      <figcaption>img_0152</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_0470.jpg" alt="img_0470" loading="lazy">
-      <figcaption>img_0470</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_0474.jpg" alt="img_0474" loading="lazy">
-      <figcaption>img_0474</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_0730.jpg" alt="img_0730" loading="lazy">
-      <figcaption>img_0730</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_0731.jpg" alt="img_0731" loading="lazy">
-      <figcaption>img_0731</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_1501.jpg" alt="img_1501" loading="lazy">
-      <figcaption>img_1501</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/img_1502.jpg" alt="img_1502" loading="lazy">
-      <figcaption>img_1502</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/march-signs.jpg" alt="march-signs" loading="lazy">
-      <figcaption>march-signs</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
-      <img src="images/archive/milky-way.jpg" alt="milky-way" loading="lazy">
-      <figcaption>milky-way</figcaption>
-    </figure>
-    <figure class="arch" tabindex="0">
       <img src="images/archive/bando-101.jpg" alt="bando-101" loading="lazy">
       <figcaption>bando-101</figcaption>
     </figure>
@@ -878,6 +794,10 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
       <figcaption>bando-52</figcaption>
     </figure>
     <figure class="arch" tabindex="0">
+      <img src="images/archive/bando-53.jpg" alt="bando-53" loading="lazy">
+      <figcaption>bando-53</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
       <img src="images/archive/bando-54.jpg" alt="bando-54" loading="lazy">
       <figcaption>bando-54</figcaption>
     </figure>
@@ -910,8 +830,80 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
       <figcaption>bando-98</figcaption>
     </figure>
     <figure class="arch" tabindex="0">
+      <img src="images/archive/cairn-stones.jpg" alt="cairn-stones" loading="lazy">
+      <figcaption>cairn-stones</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/dog-surf.jpg" alt="dog-surf" loading="lazy">
+      <figcaption>dog-surf</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_2456.jpg" alt="eli_2456" loading="lazy">
+      <figcaption>eli_2456</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_3090.jpg" alt="eli_3090" loading="lazy">
+      <figcaption>eli_3090</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_3199.jpg" alt="eli_3199" loading="lazy">
+      <figcaption>eli_3199</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_3285.jpg" alt="eli_3285" loading="lazy">
+      <figcaption>eli_3285</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_3597.jpg" alt="eli_3597" loading="lazy">
+      <figcaption>eli_3597</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/eli_6638.jpg" alt="eli_6638" loading="lazy">
+      <figcaption>eli_6638</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/flag-rally.jpg" alt="flag-rally" loading="lazy">
+      <figcaption>flag-rally</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/flare-smoke.jpg" alt="flare-smoke" loading="lazy">
+      <figcaption>flare-smoke</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_0152.jpg" alt="img_0152" loading="lazy">
+      <figcaption>img_0152</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_0470.jpg" alt="img_0470" loading="lazy">
+      <figcaption>img_0470</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_0474.jpg" alt="img_0474" loading="lazy">
+      <figcaption>img_0474</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_0730.jpg" alt="img_0730" loading="lazy">
+      <figcaption>img_0730</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_0731.jpg" alt="img_0731" loading="lazy">
+      <figcaption>img_0731</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_1501.jpg" alt="img_1501" loading="lazy">
+      <figcaption>img_1501</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/img_1502.jpg" alt="img_1502" loading="lazy">
+      <figcaption>img_1502</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
       <img src="images/archive/jesus-18.jpg" alt="jesus-18" loading="lazy">
       <figcaption>jesus-18</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/jesus-2.jpg" alt="jesus-2" loading="lazy">
+      <figcaption>jesus-2</figcaption>
     </figure>
     <figure class="arch" tabindex="0">
       <img src="images/archive/jesus-25.jpg" alt="jesus-25" loading="lazy">
@@ -928,6 +920,30 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
     <figure class="arch" tabindex="0">
       <img src="images/archive/jesus-8.jpg" alt="jesus-8" loading="lazy">
       <figcaption>jesus-8</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/march-signs.jpg" alt="march-signs" loading="lazy">
+      <figcaption>march-signs</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/milky-way.jpg" alt="milky-way" loading="lazy">
+      <figcaption>milky-way</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/monument-march.jpg" alt="monument-march" loading="lazy">
+      <figcaption>monument-march</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/night-sparklers.jpg" alt="night-sparklers" loading="lazy">
+      <figcaption>night-sparklers</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/sparkler-streaks.jpg" alt="sparkler-streaks" loading="lazy">
+      <figcaption>sparkler-streaks</figcaption>
+    </figure>
+    <figure class="arch" tabindex="0">
+      <img src="images/archive/woodland-trail.jpg" alt="woodland-trail" loading="lazy">
+      <figcaption>woodland-trail</figcaption>
     </figure>
   </div>
 </section>
