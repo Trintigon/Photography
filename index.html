@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elijah Lange — Photography</title>
-<meta name="description" content="Elijah Lange — photographer. Portrait, landscape and street.">
+<title>Eli — Photography</title>
+<meta name="description" content="Eli — photographer, Washington DC.">
 <meta name="theme-color" content="#0b0b0c">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 91.93 100'><path fill='%2523f2f0ed' d='M47.24 99.69C47.05 99.52 45.88 98.04 44.64 96.4C42.01 92.92 33.57 81.93 26.05 72.19C23.14 68.43 20.47 64.97 20.12 64.5C19.14 63.22 19.29 62.09 20.52 61.58C21.71 61.09 21.5 60.86 28.25 69.65C30.89 73.07 33.45 76.39 33.95 77.02C34.44 77.64 37.8 82.01 41.4 86.71C45.0 91.41 48.0 95.26 48.07 95.26C48.13 95.26 48.9 94.26 49.77 93.03C52.58 89.06 56.5 83.5 58.6 80.53C64.55 72.08 67.64 67.76 68.04 67.32C68.68 66.64 69.66 66.65 70.36 67.35C71.0 67.99 71.03 68.68 70.47 69.49C70.24 69.82 68.77 71.9 67.19 74.12C65.61 76.34 63.88 78.79 63.34 79.56C62.79 80.33 61.26 82.5 59.92 84.39C56.97 88.54 55.89 90.07 52.55 94.82C49.02 99.83 48.88 100.0 48.17 100.0C47.85 100.0 47.43 99.86 47.24 99.69ZM73.51 63.67C72.57 63.46 71.93 62.64 71.94 61.62C71.95 60.17 72.79 59.3 74.19 59.3C74.84 59.3 75.05 59.4 75.63 59.98C76.21 60.56 76.32 60.77 76.32 61.41C76.32 62.21 75.81 63.22 75.3 63.42C74.56 63.72 74.08 63.79 73.51 63.67ZM15.42 58.05C14.91 57.86 9.88 51.17 7.3 47.25C3.69 41.77 1.77 37.35 0.7 32.07C-1.85 19.6 3.62 7.73 14.3 2.54C17.45 1.01 20.04 0.38 23.77 0.23C30.54 -0.03 36.17 2.13 40.8 6.75C42.65 8.6 44.66 11.4 45.45 13.22C45.69 13.76 45.93 14.19 45.99 14.16C46.05 14.14 46.47 13.41 46.93 12.54C48.11 10.28 49.46 8.48 51.42 6.58C57.6 0.58 66.33 -1.41 74.74 1.26C83.0 3.89 89.33 10.92 91.3 19.65C92.87 26.63 91.4 35.49 87.3 43.65C85.22 47.79 80.71 55.12 80.07 55.41C79.34 55.75 78.78 55.65 78.23 55.1C77.37 54.24 77.49 53.82 79.54 50.53C84.74 42.19 86.75 37.74 88.02 31.8C88.45 29.77 88.49 29.22 88.49 25.79C88.5 21.47 88.28 20.19 87.03 16.97C85.91 14.11 84.62 12.17 82.28 9.81C78.86 6.37 75.44 4.55 70.87 3.76C68.44 3.34 64.72 3.49 62.37 4.1C56.89 5.54 52.16 9.38 49.61 14.47C48.83 16.03 47.94 18.77 47.68 20.47C47.51 21.57 47.39 21.85 46.97 22.21C46.34 22.74 45.6 22.75 44.99 22.23C44.6 21.9 44.48 21.54 44.2 19.96C42.53 10.65 35.15 4.08 25.79 3.57C22.25 3.38 18.96 4.04 15.7 5.6C8.04 9.27 3.34 17.1 3.33 26.18L3.33 28.24L21.42 28.29L39.5 28.33L39.93 28.83C40.53 29.53 40.51 30.57 39.89 31.15L39.42 31.58L21.73 31.58C4.56 31.58 4.04 31.59 4.04 31.91C4.04 32.09 4.27 33.04 4.55 34.02C6.17 39.66 8.73 44.09 15.56 53.11C17.96 56.28 18.09 56.62 17.24 57.53C16.69 58.13 16.08 58.3 15.42 58.05Z'/></svg>">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Elijah Lange — Photography">
+<meta property="og:title" content="Eli — Photography">
 <meta property="og:description" content="Portrait, landscape and street.">
 <meta property="og:type" content="website">
 
@@ -241,6 +241,11 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
 .tile--wide{grid-column:span 8;aspect-ratio:3/2}
 .tile--sq{grid-column:span 4;aspect-ratio:1/1}
 .tile--sq6{grid-column:span 6;aspect-ratio:1/1}
+
+/* Deliberate breaks. Two different gestures, not a system:
+   one frame runs past the page gutter, one drops out of line. */
+.tile--bleed{grid-column:1/-1;margin-inline:calc(var(--pad) * -1);aspect-ratio:3/2}
+.tile--drop{margin-top:clamp(2rem,7vw,7rem)}
 .tile--full{grid-column:span 12;aspect-ratio:3/2}
 .tile--tall{grid-column:span 4;aspect-ratio:2/3}
 .tile--half{grid-column:span 6;aspect-ratio:3/2}
@@ -470,6 +475,8 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   .split,.contact{grid-template-columns:1fr}
   .grid{gap:.6rem}
   .tile,.tile--tall,.tile--half,.tile--wide,.tile--full,.tile--sq6{grid-column:span 12;aspect-ratio:4/5}
+  .tile--bleed{aspect-ratio:3/2}
+  .tile--drop{margin-top:0}
   .tile figcaption{transform:none;opacity:1}
   .tile__mark{opacity:.75;transform:none;height:1.4rem;right:1.1rem;bottom:1.1rem}
   .brand__mark{height:1.85rem}
@@ -496,10 +503,10 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
 
 <!-- ============================ HEADER ============================ -->
 <header class="header" id="header">
-  <a class="brand" href="#top" aria-label="Elijah Lange Photography — home">
+  <a class="brand" href="#top" aria-label="Eli Photography — home">
     <svg viewBox="0 0 91.93 100" class="mark brand__mark" aria-hidden="true"><use href="#mark"/></svg>
     <span class="brand__type">
-      <b>Elijah Lange</b>
+      <b>Eli</b>
       <span>Photography</span>
     </span>
   </a>
@@ -523,11 +530,10 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
 
   <div class="hero__inner">
     <svg viewBox="0 0 91.93 100" class="mark hero__mark" aria-hidden="true"><use href="#mark"/></svg>
-    <p class="eyebrow">Photographer</p>
-    <h1 class="h-display">Elijah<br><em>Lange</em></h1>
+    <h1 class="h-display">Eli</h1>
 
     <div class="hero__foot">
-      <p class="eyebrow">Portrait · Landscape · Street</p>
+      <p class="eyebrow">Washington, DC</p>
       <div class="scroll-cue"><span>Scroll</span><i></i></div>
     </div>
   </div>
@@ -599,7 +605,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
         <figcaption><span>City</span><b>No. 08</b></figcaption>
       </figure>
 
-      <figure class="tile tile--sq6 reveal" tabindex="0">
+      <figure class="tile tile--sq6 tile--drop reveal" tabindex="0">
         <img src="images/forest-sign.jpg" alt="A roadside sign against the treeline" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
         <figcaption><span>City</span><b>No. 09</b></figcaption>
@@ -607,7 +613,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
     </div>
 
     <div class="grid" data-group="land">
-      <figure class="tile tile--full reveal" data-d="1" tabindex="0">
+      <figure class="tile tile--full tile--bleed reveal" data-d="1" tabindex="0">
         <img src="images/torii-clouds.jpg" alt="A torii gate above the cloud line" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
         <figcaption><span>Land</span><b>No. 10</b></figcaption>
@@ -724,12 +730,12 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
 <section class="section section--alt" id="about">
   <div class="split">
     <div class="split__media reveal">
-      <img src="images/bando-92.jpg" alt="Elijah Lange, reflected in a wing mirror" loading="lazy">
+      <img src="images/bando-92.jpg" alt="Eli, reflected in a wing mirror" loading="lazy">
     </div>
 
     <div class="reveal" data-d="1">
       <span class="eyebrow">About</span>
-      <h2 class="h-display" style="margin-top:1.1rem">Elijah Lange</h2>
+      <h2 class="h-display" style="margin-top:1.1rem">Eli</h2>
       <!-- Replace this placeholder with your own bio, and delete class="placeholder" -->
       <p class="lede placeholder">Placeholder — write your bio here. Two or three sentences: what you shoot, how you work, and anything a client should know before getting in touch.</p>
       <p style="margin-top:2.4rem"><a class="link-line" href="#contact">Contact</a></p>
@@ -780,7 +786,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
 <footer class="footer">
   <a class="footer__brand" href="#top">
     <svg viewBox="0 0 91.93 100" class="mark footer__mark" aria-hidden="true"><use href="#mark"/></svg>
-    <span>&copy; <span id="year">2026</span> Elijah Lange</span>
+    <span>&copy; <span id="year">2026</span> Eli</span>
   </a>
   <nav class="socials">
     <a href="https://instagram.com/eli.lang3" target="_blank" rel="noopener">@eli.lang3</a>
