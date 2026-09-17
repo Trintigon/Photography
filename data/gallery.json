@@ -1,0 +1,386 @@
+{
+  "frames": [
+    {
+      "id": "monks-procession",
+      "group": "city",
+      "shape": "tile--full",
+      "mods": [],
+      "alt": "Monks moving through a crowd, panned",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "kyoto-bus",
+      "group": "city",
+      "shape": "tile--wide",
+      "mods": [],
+      "alt": "A city bus crossing an empty Kyoto junction",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "bando-22",
+      "group": "city",
+      "shape": "tile--tall",
+      "mods": [],
+      "alt": "Flag mural behind a parked truck",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "bando-19",
+      "group": "city",
+      "shape": "tile--wide",
+      "mods": [],
+      "alt": "Steam rising over a Manhattan crossing",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "eli_6638",
+      "group": "city",
+      "shape": "tile--sq",
+      "mods": [],
+      "alt": "A skateboard propped on a shop front",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "eli_3066",
+      "group": "city",
+      "shape": "tile--half",
+      "mods": [],
+      "alt": "Torii gates at Fushimi Inari",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "bando-18",
+      "group": "city",
+      "shape": "tile--half",
+      "mods": [],
+      "alt": "Crowd under the Canal Street signs",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "scooter-night",
+      "group": "city",
+      "shape": "tile--half",
+      "mods": [],
+      "alt": "A scooter through the neon, dragged",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "forest-sign",
+      "group": "city",
+      "shape": "tile--sq6",
+      "mods": [
+        "tile--drop"
+      ],
+      "alt": "A roadside sign against the treeline",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "torii-clouds",
+      "group": "land",
+      "shape": "tile--full",
+      "mods": [
+        "tile--bleed"
+      ],
+      "alt": "A torii gate above the cloud line",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "fuji-scree",
+      "group": "land",
+      "shape": "tile--wide",
+      "mods": [],
+      "alt": "Cloud moving across the volcanic slope",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "eli_3165",
+      "group": "land",
+      "shape": "tile--sq",
+      "mods": [],
+      "alt": "Mount Fuji at sunset from the train",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "lotus-pagoda",
+      "group": "land",
+      "shape": "tile--half",
+      "mods": [],
+      "alt": "A lotus in flower below the pagoda",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "deer-dusk",
+      "group": "land",
+      "shape": "tile--half",
+      "mods": [],
+      "alt": "A buck in the sea oats at dusk",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "river-rapids",
+      "group": "land",
+      "shape": "tile--half",
+      "mods": [],
+      "alt": "A boulder standing in the rapids",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "garden-dusk",
+      "group": "land",
+      "shape": "tile--half",
+      "mods": [],
+      "alt": "A city garden going over at dusk",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "egret-shallows",
+      "group": "land",
+      "shape": "tile--half",
+      "mods": [],
+      "alt": "An egret hunting the shallows",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "dog-surf",
+      "group": "land",
+      "shape": "tile--half",
+      "mods": [],
+      "alt": "A dog walking out of the surf at sunset",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "jesus-12",
+      "group": "land",
+      "shape": "tile--full",
+      "mods": [],
+      "alt": "The Washington Monument at sunset",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "sparkler-night",
+      "group": "people",
+      "shape": "tile--wide",
+      "mods": [],
+      "alt": "Lighting a flare after dark",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "jesus-26",
+      "group": "people",
+      "shape": "tile--tall",
+      "mods": [],
+      "alt": "Watching the ducks on a red reflecting pool",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "cliff-figure",
+      "group": "people",
+      "shape": "tile--wide",
+      "mods": [],
+      "alt": "Sitting out on the ice plant above the sea",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "bando-97",
+      "group": "people",
+      "shape": "tile--tall",
+      "mods": [],
+      "alt": "Standing out on the rocks",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "eli_3552",
+      "group": "people",
+      "shape": "tile--tall",
+      "mods": [],
+      "alt": "A passenger at the train window",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "eli_6598",
+      "group": "people",
+      "shape": "tile--tall",
+      "mods": [],
+      "alt": "Silhouette at the shoreline",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "bando-59",
+      "group": "people",
+      "shape": "tile--tall",
+      "mods": [],
+      "alt": "Reaching for the serve",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    },
+    {
+      "id": "bando-45",
+      "group": "people",
+      "shape": "tile--full",
+      "mods": [],
+      "alt": "A cast rod drawn over two at the rail",
+      "title": "",
+      "place": "",
+      "year": "",
+      "song": {
+        "artist": "",
+        "track": ""
+      }
+    }
+  ]
+}
