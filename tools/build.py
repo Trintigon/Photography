@@ -20,17 +20,17 @@ GROUP_ORDER = ["city", "land", "people"]
 
 
 def caption(f, n):
-    """Group label + number until a real title exists; then the title, and a
-    place/year line if given. A frame explicitly titled 'untitled' gets no
-    caption text at all — an untitled photograph should not announce it."""
-    t = f.get("title", "").strip()
-    if not t:
+    """A wire-service cutline: a dateline, then one sentence of what is in the
+    frame. The dateline is 'PLACE — DATE' once both are filled in, and falls
+    back to the group label while they are empty, so the line is never blank.
+    A frame with no cutline yet keeps the old group + number placeholder."""
+    c = f.get("caption", "").strip()
+    if not c:
         return f'<span>{f["group"].title()}</span><b>No. {n:02d}</b>'
-    if t.lower() == "untitled":
-        return ""
-    meta = " · ".join(x for x in (f.get("place", "").strip(),
-                                  str(f.get("year", "")).strip()) if x)
-    return (f'<span>{meta}</span>' if meta else "") + f'<b>{t}</b>'
+    dateline = " — ".join(x for x in (f.get("place", "").strip(),
+                                      str(f.get("date", "")).strip()) if x)
+    return (f'<span>{esc(dateline or f["group"].title())}</span>'
+            f'<p>{esc(c)}</p>')
 
 
 def song_attrs(f):

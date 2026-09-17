@@ -12,7 +12,8 @@ entry per photograph:
   "shape": "tile--wide",      // must match the file's aspect ratio
   "mods": [],                 // tile--bleed, tile--drop
   "alt": "A city bus crossing an empty Kyoto junction",
-  "title": "", "place": "", "year": "",
+  "caption": "A city bus crosses an empty intersection beneath a no-entry sign.",
+  "place": "", "date": "",
   "song": { "artist": "", "track": "", "url": "" }
 }
 ```
@@ -44,6 +45,14 @@ each is its own grid.
 
 ## Captions
 
-- no `title` → the group name and a running number, as now
-- `title` → the title, with `place · year` above it if given
-- `title` set to `untitled` → no caption at all
+Wire-service cutlines, not titles: a dateline, then one present-tense sentence
+saying what is in the frame and nothing that isn't.
+
+- `caption` → the sentence, with the dateline above it
+- `place` + `date` → the dateline, rendered `PLACE — DATE`
+- either one on its own → that one alone
+- both empty → the group name stands in, so the line is never blank
+- no `caption` → the old group name and running number
+
+`alt` stays separate and stays short. A screen reader reads the alt text *and*
+the cutline, so the two should not be the same sentence.

@@ -6,9 +6,9 @@
       "shape": "tile--full",
       "mods": [],
       "alt": "Monks moving through a crowd, panned",
-      "title": "",
+      "caption": "Monks in robes make their way through a crowd gathered along the route.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -20,9 +20,9 @@
       "shape": "tile--wide",
       "mods": [],
       "alt": "A city bus crossing an empty Kyoto junction",
-      "title": "",
+      "caption": "A city bus crosses an empty intersection beneath a no-entry sign.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -34,9 +34,9 @@
       "shape": "tile--tall",
       "mods": [],
       "alt": "Flag mural behind a parked truck",
-      "title": "",
+      "caption": "A box truck passes a wall-sized American flag in lights.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -48,9 +48,9 @@
       "shape": "tile--wide",
       "mods": [],
       "alt": "Steam rising over a Manhattan crossing",
-      "title": "",
+      "caption": "Steam vents from a street stack, lit pink by the signs above it, as a traffic light holds red.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -62,9 +62,9 @@
       "shape": "tile--sq",
       "mods": [],
       "alt": "A skateboard propped on a shop front",
-      "title": "",
+      "caption": "A skateboarder in a knit cap pulls open a shop door, board in one hand.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -76,9 +76,9 @@
       "shape": "tile--half",
       "mods": [],
       "alt": "Torii gates at Fushimi Inari",
-      "title": "",
+      "caption": "Vermilion torii gates stand end to end over a footpath, black characters inked down each column.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -90,9 +90,9 @@
       "shape": "tile--half",
       "mods": [],
       "alt": "Crowd under the Canal Street signs",
-      "title": "",
+      "caption": "Pedestrians gather below the street signs at Canal Street and Lafayette Street.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -104,9 +104,9 @@
       "shape": "tile--half",
       "mods": [],
       "alt": "A scooter through the neon, dragged",
-      "title": "",
+      "caption": "Traffic draws out into streaks of neon in a long exposure.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -120,9 +120,9 @@
         "tile--drop"
       ],
       "alt": "A roadside sign against the treeline",
-      "title": "",
+      "caption": "A marker for a fire-fighting water supply stands at the treeline.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -136,9 +136,9 @@
         "tile--bleed"
       ],
       "alt": "A torii gate above the cloud line",
-      "title": "",
+      "caption": "A torii gate stands above a sea of cloud.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -150,9 +150,9 @@
       "shape": "tile--wide",
       "mods": [],
       "alt": "Cloud moving across the volcanic slope",
-      "title": "",
+      "caption": "Cloud spills across a slope of red volcanic scree.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -164,9 +164,9 @@
       "shape": "tile--sq",
       "mods": [],
       "alt": "Mount Fuji at sunset from the train",
-      "title": "",
+      "caption": "A conical peak catches the last light, seen through the window of a moving train.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -178,9 +178,9 @@
       "shape": "tile--half",
       "mods": [],
       "alt": "A lotus in flower below the pagoda",
-      "title": "",
+      "caption": "A lotus stands in flower above the leaves, a green temple roof behind it.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -192,9 +192,9 @@
       "shape": "tile--half",
       "mods": [],
       "alt": "A buck in the sea oats at dusk",
-      "title": "",
+      "caption": "A buck stands in the sea oats at dusk.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -206,9 +206,9 @@
       "shape": "tile--half",
       "mods": [],
       "alt": "A boulder standing in the rapids",
-      "title": "",
+      "caption": "A boulder splits the whitewater below a wooded ridge.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -220,9 +220,9 @@
       "shape": "tile--half",
       "mods": [],
       "alt": "A city garden going over at dusk",
-      "title": "",
+      "caption": "Rowhouses stand behind a community garden at last light.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -234,9 +234,9 @@
       "shape": "tile--half",
       "mods": [],
       "alt": "An egret hunting the shallows",
-      "title": "",
+      "caption": "An egret strikes at the shallows.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -248,9 +248,9 @@
       "shape": "tile--half",
       "mods": [],
       "alt": "A dog walking out of the surf at sunset",
-      "title": "",
+      "caption": "A dog walks out of the surf into the light.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -262,9 +262,9 @@
       "shape": "tile--full",
       "mods": [],
       "alt": "The Washington Monument at sunset",
-      "title": "",
+      "caption": "A plane on approach crosses behind the Washington Monument at sunset.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -276,9 +276,9 @@
       "shape": "tile--wide",
       "mods": [],
       "alt": "Lighting a flare after dark",
-      "title": "",
+      "caption": "A person in a red jacket holds a lit firework, smoke trailing off into the dark.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -290,9 +290,9 @@
       "shape": "tile--tall",
       "mods": [],
       "alt": "Watching the ducks on a red reflecting pool",
-      "title": "",
+      "caption": "A visitor sits at the edge of a reflecting pool, ducks on the water, the basin lit red.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -304,9 +304,9 @@
       "shape": "tile--wide",
       "mods": [],
       "alt": "Sitting out on the ice plant above the sea",
-      "title": "",
+      "caption": "A figure sits on a bluff of flowering ice plant above the sea.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -318,9 +318,9 @@
       "shape": "tile--tall",
       "mods": [],
       "alt": "Standing out on the rocks",
-      "title": "",
+      "caption": "A boy stands on the rocks, looking out over the water.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -332,9 +332,9 @@
       "shape": "tile--tall",
       "mods": [],
       "alt": "A passenger at the train window",
-      "title": "",
+      "caption": "A passenger rests against a train window, the country outside drawn to green.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -346,9 +346,9 @@
       "shape": "tile--tall",
       "mods": [],
       "alt": "Silhouette at the shoreline",
-      "title": "",
+      "caption": "A figure stands arms out against the backlit surf.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -360,9 +360,9 @@
       "shape": "tile--tall",
       "mods": [],
       "alt": "Reaching for the serve",
-      "title": "",
+      "caption": "A player reaches to serve against an open sky.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""
@@ -374,9 +374,9 @@
       "shape": "tile--full",
       "mods": [],
       "alt": "A cast rod drawn over two at the rail",
-      "title": "",
+      "caption": "A fishing rod and its line cut across the frame as two figures stand at the pier rail beyond.",
       "place": "",
-      "year": "",
+      "date": "",
       "song": {
         "artist": "",
         "track": ""

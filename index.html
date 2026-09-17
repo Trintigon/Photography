@@ -264,13 +264,19 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
 .tile:hover::after,.tile:focus-visible::after{opacity:1}
 .tile figcaption{
   position:absolute;left:0;bottom:0;z-index:2;
-  width:100%;padding:1.4rem 1.5rem;
+  /* the right padding is the room the watermark sits in */
+  width:100%;padding:1.4rem 3.8rem 1.4rem 1.5rem;
   transform:translateY(12px);opacity:0;
   transition:transform .6s var(--ease),opacity .6s var(--ease);
 }
 .tile:hover figcaption,.tile:focus-visible figcaption{transform:none;opacity:1}
 .tile figcaption b{display:block;font-family:var(--display);font-size:1.35rem;font-weight:400;letter-spacing:.02em}
-.tile figcaption span{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+.tile figcaption span{display:block;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+/* The cutline is a sentence, so it is set as text and not as a title. */
+.tile figcaption p{
+  margin:.5rem 0 0;max-width:48ch;
+  font-size:.82rem;line-height:1.5;color:rgba(240,240,238,.82);
+}
 .tile.is-hidden{display:none}
 .tile:focus-visible{outline:1px solid var(--accent);outline-offset:3px}
 
@@ -377,7 +383,8 @@ body.menu-open .burger i:nth-child(2){transform:translateY(-7px) rotate(-45deg);
   background:rgba(8,8,9,.97);
   backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
   opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility .45s;
-  padding:clamp(3rem,8vh,5rem) clamp(1rem,6vw,5rem);
+  /* The extra bottom padding is the band the cutline and the count sit in. */
+  padding:clamp(3rem,8vh,5rem) clamp(1rem,6vw,5rem) clamp(7rem,15vh,8.5rem);
 }
 .lightbox.is-open{opacity:1;visibility:visible}
 body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
@@ -399,6 +406,14 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
 .lb-prev{left:clamp(.6rem,2.5vw,2rem)}
 .lb-next{right:clamp(.6rem,2.5vw,2rem)}
 .lb-count{position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);font-size:.65rem;letter-spacing:.3em;color:var(--ink-faint)}
+.lb-cap{
+  position:absolute;bottom:3.6rem;left:50%;transform:translateX(-50%);
+  width:min(64ch,88vw);text-align:center;
+  font-size:.85rem;line-height:1.55;color:rgba(242,240,237,.8);
+}
+.lb-cap p{margin:0}
+.lb-cap span{display:block;margin-bottom:.5rem;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+.lb-cap b{font-family:var(--display);font-size:1.1rem;font-weight:400}
 
 /* ============================================================
    REVEAL
@@ -560,55 +575,55 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
       <figure class="tile tile--full reveal" data-d="1" tabindex="0">
         <img src="images/monks-procession.jpg" alt="Monks moving through a crowd, panned" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>City</span><b>No. 01</b></figcaption>
+        <figcaption><span>City</span><p>Monks in robes make their way through a crowd gathered along the route.</p></figcaption>
       </figure>
 
       <figure class="tile tile--wide reveal" data-d="2" tabindex="0">
         <img src="images/kyoto-bus.jpg" alt="A city bus crossing an empty Kyoto junction" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>City</span><b>No. 02</b></figcaption>
+        <figcaption><span>City</span><p>A city bus crosses an empty intersection beneath a no-entry sign.</p></figcaption>
       </figure>
 
       <figure class="tile tile--tall reveal" tabindex="0">
         <img src="images/bando-22.jpg" alt="Flag mural behind a parked truck" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>City</span><b>No. 03</b></figcaption>
+        <figcaption><span>City</span><p>A box truck passes a wall-sized American flag in lights.</p></figcaption>
       </figure>
 
       <figure class="tile tile--wide reveal" data-d="1" tabindex="0">
         <img src="images/bando-19.jpg" alt="Steam rising over a Manhattan crossing" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>City</span><b>No. 04</b></figcaption>
+        <figcaption><span>City</span><p>Steam vents from a street stack, lit pink by the signs above it, as a traffic light holds red.</p></figcaption>
       </figure>
 
       <figure class="tile tile--sq reveal" data-d="2" tabindex="0">
         <img src="images/eli_6638.jpg" alt="A skateboard propped on a shop front" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>City</span><b>No. 05</b></figcaption>
+        <figcaption><span>City</span><p>A skateboarder in a knit cap pulls open a shop door, board in one hand.</p></figcaption>
       </figure>
 
       <figure class="tile tile--half reveal" tabindex="0">
         <img src="images/eli_3066.jpg" alt="Torii gates at Fushimi Inari" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>City</span><b>No. 06</b></figcaption>
+        <figcaption><span>City</span><p>Vermilion torii gates stand end to end over a footpath, black characters inked down each column.</p></figcaption>
       </figure>
 
       <figure class="tile tile--half reveal" data-d="1" tabindex="0">
         <img src="images/bando-18.jpg" alt="Crowd under the Canal Street signs" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>City</span><b>No. 07</b></figcaption>
+        <figcaption><span>City</span><p>Pedestrians gather below the street signs at Canal Street and Lafayette Street.</p></figcaption>
       </figure>
 
       <figure class="tile tile--half reveal" data-d="2" tabindex="0">
         <img src="images/scooter-night.jpg" alt="A scooter through the neon, dragged" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>City</span><b>No. 08</b></figcaption>
+        <figcaption><span>City</span><p>Traffic draws out into streaks of neon in a long exposure.</p></figcaption>
       </figure>
 
       <figure class="tile tile--sq6 tile--drop reveal" tabindex="0">
         <img src="images/forest-sign.jpg" alt="A roadside sign against the treeline" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>City</span><b>No. 09</b></figcaption>
+        <figcaption><span>City</span><p>A marker for a fire-fighting water supply stands at the treeline.</p></figcaption>
       </figure>
     </div>
 
@@ -616,61 +631,61 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
       <figure class="tile tile--full tile--bleed reveal" data-d="1" tabindex="0">
         <img src="images/torii-clouds.jpg" alt="A torii gate above the cloud line" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>Land</span><b>No. 10</b></figcaption>
+        <figcaption><span>Land</span><p>A torii gate stands above a sea of cloud.</p></figcaption>
       </figure>
 
       <figure class="tile tile--wide reveal" data-d="2" tabindex="0">
         <img src="images/fuji-scree.jpg" alt="Cloud moving across the volcanic slope" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>Land</span><b>No. 11</b></figcaption>
+        <figcaption><span>Land</span><p>Cloud spills across a slope of red volcanic scree.</p></figcaption>
       </figure>
 
       <figure class="tile tile--sq reveal" tabindex="0">
         <img src="images/eli_3165.jpg" alt="Mount Fuji at sunset from the train" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>Land</span><b>No. 12</b></figcaption>
+        <figcaption><span>Land</span><p>A conical peak catches the last light, seen through the window of a moving train.</p></figcaption>
       </figure>
 
       <figure class="tile tile--half reveal" data-d="1" tabindex="0">
         <img src="images/lotus-pagoda.jpg" alt="A lotus in flower below the pagoda" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>Land</span><b>No. 13</b></figcaption>
+        <figcaption><span>Land</span><p>A lotus stands in flower above the leaves, a green temple roof behind it.</p></figcaption>
       </figure>
 
       <figure class="tile tile--half reveal" data-d="2" tabindex="0">
         <img src="images/deer-dusk.jpg" alt="A buck in the sea oats at dusk" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>Land</span><b>No. 14</b></figcaption>
+        <figcaption><span>Land</span><p>A buck stands in the sea oats at dusk.</p></figcaption>
       </figure>
 
       <figure class="tile tile--half reveal" tabindex="0">
         <img src="images/river-rapids.jpg" alt="A boulder standing in the rapids" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>Land</span><b>No. 15</b></figcaption>
+        <figcaption><span>Land</span><p>A boulder splits the whitewater below a wooded ridge.</p></figcaption>
       </figure>
 
       <figure class="tile tile--half reveal" data-d="1" tabindex="0">
         <img src="images/garden-dusk.jpg" alt="A city garden going over at dusk" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>Land</span><b>No. 16</b></figcaption>
+        <figcaption><span>Land</span><p>Rowhouses stand behind a community garden at last light.</p></figcaption>
       </figure>
 
       <figure class="tile tile--half reveal" data-d="2" tabindex="0">
         <img src="images/egret-shallows.jpg" alt="An egret hunting the shallows" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>Land</span><b>No. 17</b></figcaption>
+        <figcaption><span>Land</span><p>An egret strikes at the shallows.</p></figcaption>
       </figure>
 
       <figure class="tile tile--half reveal" tabindex="0">
         <img src="images/dog-surf.jpg" alt="A dog walking out of the surf at sunset" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>Land</span><b>No. 18</b></figcaption>
+        <figcaption><span>Land</span><p>A dog walks out of the surf into the light.</p></figcaption>
       </figure>
 
       <figure class="tile tile--full reveal" data-d="1" tabindex="0">
         <img src="images/jesus-12.jpg" alt="The Washington Monument at sunset" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>Land</span><b>No. 19</b></figcaption>
+        <figcaption><span>Land</span><p>A plane on approach crosses behind the Washington Monument at sunset.</p></figcaption>
       </figure>
     </div>
 
@@ -678,49 +693,49 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
       <figure class="tile tile--wide reveal" data-d="2" tabindex="0">
         <img src="images/sparkler-night.jpg" alt="Lighting a flare after dark" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>People</span><b>No. 20</b></figcaption>
+        <figcaption><span>People</span><p>A person in a red jacket holds a lit firework, smoke trailing off into the dark.</p></figcaption>
       </figure>
 
       <figure class="tile tile--tall reveal" tabindex="0">
         <img src="images/jesus-26.jpg" alt="Watching the ducks on a red reflecting pool" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>People</span><b>No. 21</b></figcaption>
+        <figcaption><span>People</span><p>A visitor sits at the edge of a reflecting pool, ducks on the water, the basin lit red.</p></figcaption>
       </figure>
 
       <figure class="tile tile--wide reveal" data-d="1" tabindex="0">
         <img src="images/cliff-figure.jpg" alt="Sitting out on the ice plant above the sea" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>People</span><b>No. 22</b></figcaption>
+        <figcaption><span>People</span><p>A figure sits on a bluff of flowering ice plant above the sea.</p></figcaption>
       </figure>
 
       <figure class="tile tile--tall reveal" data-d="2" tabindex="0">
         <img src="images/bando-97.jpg" alt="Standing out on the rocks" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>People</span><b>No. 23</b></figcaption>
+        <figcaption><span>People</span><p>A boy stands on the rocks, looking out over the water.</p></figcaption>
       </figure>
 
       <figure class="tile tile--tall reveal" tabindex="0">
         <img src="images/eli_3552.jpg" alt="A passenger at the train window" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>People</span><b>No. 24</b></figcaption>
+        <figcaption><span>People</span><p>A passenger rests against a train window, the country outside drawn to green.</p></figcaption>
       </figure>
 
       <figure class="tile tile--tall reveal" data-d="1" tabindex="0">
         <img src="images/eli_6598.jpg" alt="Silhouette at the shoreline" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>People</span><b>No. 25</b></figcaption>
+        <figcaption><span>People</span><p>A figure stands arms out against the backlit surf.</p></figcaption>
       </figure>
 
       <figure class="tile tile--tall reveal" data-d="2" tabindex="0">
         <img src="images/bando-59.jpg" alt="Reaching for the serve" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>People</span><b>No. 26</b></figcaption>
+        <figcaption><span>People</span><p>A player reaches to serve against an open sky.</p></figcaption>
       </figure>
 
       <figure class="tile tile--full reveal" tabindex="0">
         <img src="images/bando-45.jpg" alt="A cast rod drawn over two at the rail" loading="lazy">
         <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>
-        <figcaption><span>People</span><b>No. 27</b></figcaption>
+        <figcaption><span>People</span><p>A fishing rod and its line cut across the frame as two figures stand at the pier rail beyond.</p></figcaption>
       </figure>
     </div>
   </div>
@@ -801,6 +816,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">&#8592;</button>
   <img id="lbImg" src="" alt="">
   <button class="lb-nav lb-next" id="lbNext" aria-label="Next">&#8594;</button>
+  <div class="lb-cap" id="lbCap"></div>
   <span class="lb-count" id="lbCount"></span>
 </div>
 
@@ -868,6 +884,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   var lb = document.getElementById("lightbox");
   var lbImg = document.getElementById("lbImg");
   var lbCount = document.getElementById("lbCount");
+  var lbCap = document.getElementById("lbCap");
   var index = 0;
 
   var visible = function () {
@@ -884,6 +901,8 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
     var src = list[index].querySelector("img");
     lbImg.src = src.src;
     lbImg.alt = src.alt;
+    var fc = list[index].querySelector("figcaption");
+    lbCap.innerHTML = fc ? fc.innerHTML : "";
     lbCount.textContent = ("0" + (index + 1)).slice(-2) + " / " + ("0" + list.length).slice(-2);
   };
 
