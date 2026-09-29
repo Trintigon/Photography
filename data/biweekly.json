@@ -1,4 +1,21 @@
 {
   "_comment": "One entry per assignment, oldest first. Numbering follows this order; the page shows them newest first. Images live in images/biweekly/<id>.jpg.",
-  "entries": []
+  "entries": [
+    {
+      "id": "moss-cabin",
+      "date": "",
+      "prompt": "Forgotten Places",
+      "place": "",
+      "caption": "Moss and fallen twigs cover the shingle roof of a log shelter, several shingles lifting away, a stone chimney standing clear of the trees behind.",
+      "alt": "A moss-covered shingle roof on a log shelter in summer woods"
+    },
+    {
+      "id": "train-window",
+      "date": "",
+      "prompt": "Golden Hour",
+      "place": "",
+      "caption": "A passenger rests against a train window, the country outside drawn to green.",
+      "alt": "A passenger at the train window"
+    }
+  ]
 }
