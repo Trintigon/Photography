@@ -288,12 +288,18 @@ def entry_html(e, n, total):
     if e.get("date", "").strip():
         meta.append(f'<span class="entry__date">{esc(longdate(e["date"]))}</span>')
 
+    # The class asks for two things under each frame: a title, and a short
+    # explanation in art language of how the choices carry the theme word.
+    title = e.get("title", "").strip()
+    statement = e.get("statement", "").strip()
     cap = ""
-    if e.get("caption", "").strip():
+    if title or statement:
         place = esc(e.get("place", "").strip())
         cap = ("\n          <figcaption>"
                + (f"<span>{place}</span>" if place else "")
-               + f'<p>{esc(e["caption"].strip())}</p></figcaption>')
+               + (f"<b>{esc(title)}</b>" if title else "")
+               + (f"<p>{esc(statement)}</p>" if statement else "")
+               + "</figcaption>")
 
     # the newest frame is the one above the fold, so it is the one not deferred
     lazy = "" if n == total else ' loading="lazy"'

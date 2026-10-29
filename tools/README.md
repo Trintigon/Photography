@@ -103,13 +103,21 @@ and numbers them in posting order, so No. 01 stays No. 01 forever.
 ```json
 {
   "id": "w03-motion",     // images/biweekly/w03-motion.jpg
+  "prompt": "Motion",     // the theme word
   "date": "2026-10-06",   // rendered "6 October 2026"; any other text passes through
-  "prompt": "Motion",     // the assignment, optional
-  "place": "Washington, DC",
-  "caption": "One sentence — what is in the frame.",
+  "title": "",            // Eli's title for the frame
+  "statement": "",        // the art-language explanation the class asks for
+  "place": "",
   "alt": "Short description for a screen reader"
 }
 ```
+
+The class wants two pieces of writing under each frame: a **title**, and a short
+**statement** explaining in art language how the choices — composition,
+lighting, focus, exposure — carry the theme word. The title renders in the
+display face, the statement as body text under it. Both are Eli's to write: the
+assignment is explicitly his own creative interpretation. Leave either blank and
+it simply does not render.
 
 To add one: drop the JPEG in `images/biweekly/`, add the entry, run the build.
 No shape to pick — the build reads the file's real dimensions and the frame
