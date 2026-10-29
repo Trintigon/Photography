@@ -1,21 +1,37 @@
 {
-  "_comment": "One entry per assignment, oldest first. Numbering follows this order; the page shows them newest first. Images live in images/biweekly/<id>.jpg.",
+  "_comment": "One entry per assignment, oldest first. Numbering follows this order; the page shows them newest first. Images live in images/biweekly/<id>.jpg. Retired frames keep their files: moss-cabin.jpg and train-window.jpg are still here, just not listed.",
   "entries": [
     {
-      "id": "moss-cabin",
+      "id": "hot",
+      "date": "",
+      "prompt": "Hot",
+      "place": "",
+      "caption": "",
+      "alt": "A figure lit by a burning firework at night, smoke glowing orange around them"
+    },
+    {
+      "id": "drip",
+      "date": "",
+      "prompt": "Drip",
+      "place": "",
+      "caption": "",
+      "alt": "Raindrops on glass, thrown out of focus, a lit convenience-store sign behind them"
+    },
+    {
+      "id": "forgotten-places",
       "date": "",
       "prompt": "Forgotten Places",
       "place": "",
-      "caption": "Moss and fallen twigs cover the shingle roof of a log shelter, several shingles lifting away, a stone chimney standing clear of the trees behind.",
-      "alt": "A moss-covered shingle roof on a log shelter in summer woods"
+      "caption": "",
+      "alt": "A painted car parked against a mural, shrubs and tall weeds growing out of it"
     },
     {
-      "id": "train-window",
+      "id": "golden-hour",
       "date": "",
       "prompt": "Golden Hour",
       "place": "",
-      "caption": "A passenger rests against a train window, the country outside drawn to green.",
-      "alt": "A passenger at the train window"
+      "caption": "",
+      "alt": "Low sun throwing the shadow of a cyclist onto a concrete underpass wall"
     }
   ]
 }
