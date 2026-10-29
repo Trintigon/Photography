@@ -98,10 +98,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   font-size:.55rem;letter-spacing:.5em;text-transform:uppercase;
   color:var(--ink-faint);margin-top:.25rem;padding-left:.2em;
 }
-.nav{display:flex;align-items:center;gap:2.6rem}
+.nav{display:flex;align-items:center;gap:1.7rem}
 .nav a{
   position:relative;
-  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
+  font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;
   color:var(--ink-dim);
   transition:color .4s var(--ease);
 }
@@ -111,6 +111,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   transform:scaleX(0);transform-origin:right;
   transition:transform .5s var(--ease);
 }
+.nav a[aria-current="page"]{color:var(--ink)}
+.nav a[aria-current="page"]::after{transform:scaleX(1);transform-origin:left}
 .nav a:hover{color:var(--ink)}
 .nav a:hover::after{transform:scaleX(1);transform-origin:left}
 
@@ -453,7 +455,7 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   .tile,.tile--tall{grid-column:span 6}
   .tile--half{grid-column:span 6}
 }
-@media(max-width:760px){
+@media(max-width:1040px){
   .burger{display:block}
   .nav{
     position:fixed;inset:0;z-index:70;
@@ -551,3 +553,16 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   .entry__frame figcaption{padding-right:0}
   .entry__date{margin-left:0}
 }
+
+/* ============================================================
+   PORTFOLIO + TEXT PAGES
+   ============================================================ */
+/* the filters are their own row now that Portfolio has its own page */
+.section > .filters{margin-bottom:clamp(2rem,5vw,3.5rem)}
+
+.prose{max-width:62ch}
+.prose .lede{max-width:none}
+.prose .lede + .lede{margin-top:1.3rem}
+
+/* a page head with nothing under it should not leave the footer floating */
+.page-head + .section{min-height:34vh}

@@ -1,21 +1,34 @@
 # tools
 
-    python3 tools/build.py            # rewrite index.html and biweekly.html
-    python3 tools/build.py --check    # fail if either page is out of date
+    python3 tools/build.py            # rewrite every generated page
+    python3 tools/build.py --check    # fail if any page is out of date
 
-Two things are generated: the Work grid inside `index.html`, and the whole of
-`biweekly.html`. The shared look lives in `assets/site.css` and `assets/site.js`,
-which both pages link.
+`index.html` is the only page written by hand, and it is also the template:
+every other page lifts its head, brand mark, header, footer and lightbox out of
+it at build time. Change the header once and the whole site follows — never edit
+a generated page, it gets overwritten.
+
+| page | from |
+| --- | --- |
+| `index.html` | hand-written, except the selected strip (`data/gallery.json` → `home`) |
+| `portfolio.html` | `data/gallery.json` → `frames` |
+| `biweekly.html` | `data/biweekly.json` |
+| `contact.html` | `tools/partials/contact.html` |
+| `about` `education` `tips` `resume` `ap-work` | `data/pages.json` |
+
+The shared look lives in `assets/site.css` and `assets/site.js`, which every
+page links. The script guards the page-specific pieces, so the filter bar and
+the contact form can be missing without it throwing.
 
 ## The gallery is generated, not hand-written
 
-`data/gallery.json` is the single source of truth for the Work section. One
-entry per photograph:
+`data/gallery.json` is the single source of truth for the Portfolio page and
+for the short strip on the home page. One entry per photograph:
 
 ```json
 {
   "id": "kyoto-bus",          // images/kyoto-bus.jpg
-  "group": "city",            // city | land | people
+  "group": "travel",          // photojournalism | travel | landscapes | portraits
   "shape": "tile--wide",      // must match the file's aspect ratio
   "mods": [],                 // tile--bleed, tile--drop
   "alt": "A city bus crossing an empty Kyoto junction",
@@ -41,9 +54,31 @@ cropped. `tile--bleed` runs a frame past the page gutter; `tile--drop` knocks
 one out of line. Both are deliberate breaks — used sparingly, and ignored on
 mobile.
 
-Groups render in the order `city, land, people`, and within a group in the
-order they appear in the JSON. A group no longer has to total a multiple of 12;
-each is its own grid.
+Categories render in the order set by `GROUP_ORDER` in `build.py`, and within a
+category in the order they appear in the JSON. A category is its own grid, so it
+does not have to total a multiple of 12 — but the build prints each one's column
+total, and a ragged tail means the last row does not fill. Adding a category
+means adding it to `GROUP_ORDER`; the filter buttons are generated from it.
+
+The `home` list at the top of the file is the strip on the home page. It
+references frames by id and may give them a different shape, since a six-frame
+strip tiles differently from a full category.
+
+## Text pages
+
+`data/pages.json` drives the five written tabs. Each starts as a shell:
+
+```json
+{ "slug": "tips", "nav": "Tips", "eyebrow": "Advice", "title": "Tips",
+  "note": "What shows on the page until it is written." }
+```
+
+To fill one in, add a `body` array of paragraphs. The build renders those
+instead and drops the placeholder styling:
+
+```json
+{ "slug": "tips", ..., "body": ["First paragraph.", "Second paragraph."] }
+```
 
 ## Captions
 
