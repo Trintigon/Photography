@@ -1,48 +1,55 @@
 #!/usr/bin/env python3
-"""Regenerate the generated parts of the site.
+"""Regenerate every generated page on the site.
 
-  data/gallery.json   ->  the Work grid inside index.html
-  data/biweekly.json  ->  the whole of biweekly.html
+  data/gallery.json   ->  the strip inside index.html, and all of portfolio.html
+  data/biweekly.json  ->  all of biweekly.html
+  data/pages.json     ->  about / education / tips / resume / ap-work
+                          (contact.html is generated too, from index.html's own
+                           contact markup)
 
-The JSON is the single source of truth. Edit it (or let the labelling tool
-write it), run this, commit. Nothing generated is hand-edited.
+index.html is the one page kept by hand, and it is also the template: every
+other page lifts its head, brand mark, header, footer and lightbox straight out
+of it. Change the header once, rebuild, and the whole site follows.
 
-biweekly.html takes its head, brand mark, header and footer from index.html,
-so the two pages cannot drift: change the header in index.html, rebuild, and
-the log page follows.
-
-    python3 tools/build.py          # rewrite index.html and biweekly.html
+    python3 tools/build.py          # rewrite everything
     python3 tools/build.py --check  # verify only, non-zero exit if stale
 """
 import json, re, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-DATA = ROOT / "data" / "gallery.json"
 PAGE = ROOT / "index.html"
+GALLERY = ROOT / "data" / "gallery.json"
 LOG_DATA = ROOT / "data" / "biweekly.json"
-LOG_PAGE = ROOT / "biweekly.html"
+PAGES_DATA = ROOT / "data" / "pages.json"
 LOG_IMAGES = ROOT / "images" / "biweekly"
+
+SPAN = {"tile--full": 12, "tile--wide": 8, "tile--half": 6,
+        "tile--tall": 4, "tile--sq": 4, "tile--sq6": 6}
+GROUP_ORDER = ["photojournalism", "travel", "landscapes", "portraits"]
 
 MONTHS = ["January", "February", "March", "April", "May", "June", "July",
           "August", "September", "October", "November", "December"]
 
-SPAN = {"tile--full": 12, "tile--wide": 8, "tile--half": 6,
-        "tile--tall": 4, "tile--sq": 4, "tile--sq6": 6}
-GROUP_ORDER = ["city", "land", "people"]
 
+def esc(v):
+    return (v.replace("&", "&amp;").replace('"', "&quot;")
+             .replace("<", "&lt;").replace(">", "&gt;"))
+
+
+# ----------------------------------------------------------------- captions
 
 def caption(f, n):
     """A wire-service cutline: a dateline, then one sentence of what is in the
     frame. The dateline is 'PLACE — DATE' once both are filled in, and falls
-    back to the group label while they are empty, so the line is never blank.
-    A frame with no cutline yet keeps the old group + number placeholder."""
+    back to the category while they are empty, so the line is never blank.
+    A frame with no cutline yet keeps the old category + number placeholder."""
     c = f.get("caption", "").strip()
+    label = f["group"].title()
     if not c:
-        return f'<span>{f["group"].title()}</span><b>No. {n:02d}</b>'
+        return f'<span>{label}</span><b>No. {n:02d}</b>'
     dateline = " — ".join(x for x in (f.get("place", "").strip(),
                                       str(f.get("date", "")).strip()) if x)
-    return (f'<span>{esc(dateline or f["group"].title())}</span>'
-            f'<p>{esc(c)}</p>')
+    return f'<span>{esc(dateline or label)}</span><p>{esc(c)}</p>'
 
 
 def song_attrs(f):
@@ -56,53 +63,172 @@ def song_attrs(f):
     return a
 
 
-def esc(v):
-    return (v.replace("&", "&amp;").replace('"', "&quot;")
-             .replace("<", "&lt;").replace(">", "&gt;"))
+def figure(f, shape, mods, n, indent="      "):
+    cls = " ".join(["tile", shape] + list(mods) + ["reveal"])
+    d = f' data-d="{n % 3}"' if n % 3 else ""
+    cap = caption(f, n)
+    cap = f'\n{indent}  <figcaption>{cap}</figcaption>' if cap else ""
+    return (f'{indent}<figure class="{cls}"{d} tabindex="0"{song_attrs(f)}>\n'
+            f'{indent}  <img src="images/{f["id"]}.jpg" alt="{esc(f["alt"])}" loading="lazy">\n'
+            f'{indent}  <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>'
+            f'{cap}\n'
+            f'{indent}</figure>')
 
 
-def build():
-    frames = json.loads(DATA.read_text())["frames"]
-    seen, blocks, n = set(), [], 0
+# ----------------------------------------------------------------- gallery
 
+def load_gallery():
+    data = json.loads(GALLERY.read_text())
+    frames, seen = data["frames"], set()
+    for f in frames:
+        if f["id"] in seen:
+            sys.exit(f"duplicate frame id: {f['id']}")
+        seen.add(f["id"])
+        if not (ROOT / "images" / f"{f['id']}.jpg").exists():
+            sys.exit(f"missing image: images/{f['id']}.jpg")
+        if f["group"] not in GROUP_ORDER:
+            sys.exit(f"{f['id']}: unknown category {f['group']!r}")
+    by_id = {f["id"]: f for f in frames}
+    for h in data.get("home", []):
+        if h["id"] not in by_id:
+            sys.exit(f"home strip references an unknown frame: {h['id']}")
+    return data, by_id
+
+
+def groups_block(data, by_id, which):
+    """The generated #groups container. On the portfolio page that is one grid
+    per category; on the home page it is the single unfiltered strip."""
+    if which == "home":
+        figs = [figure(by_id[h["id"]], h["shape"], [], i + 1)
+                for i, h in enumerate(data.get("home", []))]
+        inner = ('    <div class="grid">\n' + "\n\n".join(figs) + "\n    </div>")
+        cols = sum(SPAN[h["shape"]] for h in data.get("home", []))
+        return inner, [("home", len(figs), cols)]
+
+    blocks, tally, n = [], [], 0
     for g in GROUP_ORDER:
-        rows = [f for f in frames if f["group"] == g]
+        rows = [f for f in data["frames"] if f["group"] == g]
         if not rows:
             continue
-        cols = sum(SPAN[f["shape"]] for f in rows)
         figs = []
         for f in rows:
-            if f["id"] in seen:
-                sys.exit(f"duplicate frame id: {f['id']}")
-            seen.add(f["id"])
-            if not (ROOT / "images" / f"{f['id']}.jpg").exists():
-                sys.exit(f"missing image: images/{f['id']}.jpg")
             n += 1
-            cls = " ".join(["tile", f["shape"]] + f.get("mods", []) + ["reveal"])
-            d = f' data-d="{n % 3}"' if n % 3 else ""
-            cap = caption(f, n)
-            cap = f"\n        <figcaption>{cap}</figcaption>" if cap else ""
-            figs.append(
-                f'      <figure class="{cls}"{d} tabindex="0"{song_attrs(f)}>\n'
-                f'        <img src="images/{f["id"]}.jpg" alt="{esc(f["alt"])}" loading="lazy">\n'
-                f'        <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>'
-                f'{cap}\n'
-                f'      </figure>')
-        blocks.append((g, len(rows), cols,
-                       f'    <div class="grid" data-group="{g}">\n'
-                       + "\n\n".join(figs) + "\n    </div>"))
+            figs.append(figure(f, f["shape"], f.get("mods", []), n))
+        blocks.append(f'    <div class="grid" data-group="{g}">\n'
+                      + "\n\n".join(figs) + "\n    </div>")
+        tally.append((g, len(rows), sum(SPAN[f["shape"]] for f in rows)))
+    return "\n\n".join(blocks), tally
 
-    body = ('  <div class="groups" id="groups">\n'
-            + "\n\n".join(b[3] for b in blocks) + "\n  </div>")
-    page = PAGE.read_text()
+
+def swap_groups(page, inner):
+    body = '  <div class="groups" id="groups">\n' + inner + "\n  </div>"
     new = re.sub(r'  <div class="groups" id="groups">\n.*?\n  </div>',
                  lambda _: body, page, count=1, flags=re.S)
     if new == page and body not in page:
-        sys.exit("could not find the groups container in index.html")
-    return new, blocks, n
+        sys.exit("could not find the groups container")
+    return new
 
 
-# ---------------------------------------------------------------- biweekly
+# ----------------------------------------------------------------- template
+
+def lift(page, pattern, what):
+    m = re.search(pattern, page, re.S)
+    if not m:
+        sys.exit(f"could not find the {what} in index.html")
+    return m.group(0)
+
+
+def relink(html, slug):
+    """Mark the tab for the page being generated."""
+    return html.replace(f'href="{slug}.html"', f'href="{slug}.html" aria-current="page"')
+
+
+def shell(index_html, slug, title, description, body):
+    head = lift(index_html,
+                r'<meta charset="utf-8">.*?<link rel="stylesheet" href="assets/site\.css">',
+                "head")
+    head = head.replace("<title>Eli — Photography</title>", f"<title>{esc(title)} — Eli</title>")
+    head = re.sub(r'<meta name="description" content="[^"]*">',
+                  f'<meta name="description" content="{esc(description)}">', head, count=1)
+    head = re.sub(r'<meta property="og:title" content="[^"]*">',
+                  f'<meta property="og:title" content="{esc(title)} — Eli">', head, count=1)
+    head = re.sub(r'<meta property="og:description" content="[^"]*">',
+                  f'<meta property="og:description" content="{esc(description)}">', head, count=1)
+
+    sprite = lift(index_html, r'<!-- Brand mark\..*?</svg>\n', "brand mark sprite")
+    header = relink(lift(index_html, r'<header class="header".*?</header>', "header"), slug)
+    footer = relink(lift(index_html, r'<footer class="footer">.*?</footer>', "footer"), slug)
+    lightbox = lift(index_html, r'<div class="lightbox".*?\n</div>', "lightbox")
+
+    return (f'<!DOCTYPE html>\n<html lang="en">\n<head>\n{head}\n</head>\n<body>\n\n'
+            f'{sprite}\n{header}\n\n'
+            f'<!-- Generated by tools/build.py — do not edit by hand -->\n'
+            f'{body}\n\n{footer}\n\n{lightbox}\n\n'
+            f'<script src="assets/site.js"></script>\n\n</body>\n</html>\n')
+
+
+def page_head(eyebrow, title, lede=""):
+    lede = f'\n    <p class="lede">{esc(lede)}</p>' if lede else ""
+    return (f'<section class="page-head" id="top">\n'
+            f'  <div class="reveal">\n'
+            f'    <svg viewBox="0 0 91.93 100" class="mark head__mark" aria-hidden="true"><use href="#mark"/></svg>\n'
+            f'    <span class="eyebrow">{esc(eyebrow)}</span>\n'
+            f'    <h1 class="h-display">{esc(title)}</h1>{lede}\n'
+            f'  </div>\n'
+            f'</section>')
+
+
+# ----------------------------------------------------------------- portfolio
+
+def build_portfolio(index_html, data, by_id):
+    inner, tally = groups_block(data, by_id, "portfolio")
+    filters = "\n".join(
+        f'    <button data-filter="{g}">{g.title()}</button>'
+        for g, _, _ in tally)
+    body = (f'{page_head("Selected", "Portfolio")}\n\n'
+            f'<section class="section" id="work">\n'
+            f'  <div class="filters reveal" id="filters">\n'
+            f'    <button class="is-active" data-filter="all">All</button>\n'
+            f'{filters}\n'
+            f'  </div>\n\n'
+            f'  <div class="groups" id="groups">\n{inner}\n  </div>\n'
+            f'</section>')
+    return shell(index_html, "portfolio", "Portfolio",
+                 "Selected photographs — photojournalism, travel, landscapes and portraits.",
+                 body), tally
+
+
+# ----------------------------------------------------------------- contact
+
+def build_contact(index_html):
+    block = (ROOT / "tools" / "partials" / "contact.html").read_text().rstrip("\n")
+    body = f'{page_head("Contact", "Get in touch")}\n\n{block}'
+    return shell(index_html, "contact", "Contact",
+                 "Get in touch — Eli, photographer, Washington DC.", body)
+
+
+# ----------------------------------------------------------------- shells
+
+def build_pages(index_html):
+    out = []
+    for p in json.loads(PAGES_DATA.read_text())["pages"]:
+        paras = [x for x in p.get("body", []) if x.strip()]
+        if paras:
+            inner = "\n".join(f'    <p class="lede">{esc(x)}</p>' for x in paras)
+        else:
+            inner = (f'    <p class="lede placeholder">Not written yet — '
+                     f'{esc(p["note"])}</p>')
+        body = (f'{page_head(p["eyebrow"], p["title"])}\n\n'
+                f'<section class="section">\n'
+                f'  <div class="prose reveal">\n{inner}\n  </div>\n'
+                f'</section>')
+        out.append((ROOT / f'{p["slug"]}.html',
+                    shell(index_html, p["slug"], p["title"], p["note"], body),
+                    p["slug"], bool(paras)))
+    return out
+
+
+# ----------------------------------------------------------------- biweekly
 
 def jpeg_size(path):
     """Width and height straight out of the JPEG's SOF marker, so the img can
@@ -146,20 +272,6 @@ def longdate(iso):
     return f"{d} {MONTHS[mo - 1]} {y}"
 
 
-def lift(page, pattern, what):
-    m = re.search(pattern, page, re.S)
-    if not m:
-        sys.exit(f"could not find the {what} in index.html")
-    return m.group(0)
-
-
-def relink(html):
-    """The front page's own-page anchors have to become links back to it."""
-    html = html.replace('href="biweekly.html"', 'href="biweekly.html" aria-current="page"')
-    html = re.sub(r'href="#(work|about|contact)"', r'href="index.html#\1"', html)
-    return html.replace('href="#top"', 'href="index.html"')
-
-
 def entry_html(e, n, total):
     stem = e["id"]
     src = LOG_IMAGES / f"{stem}.jpg"
@@ -176,12 +288,18 @@ def entry_html(e, n, total):
     if e.get("date", "").strip():
         meta.append(f'<span class="entry__date">{esc(longdate(e["date"]))}</span>')
 
+    # The class asks for two things under each frame: a title, and a short
+    # explanation in art language of how the choices carry the theme word.
+    title = e.get("title", "").strip()
+    statement = e.get("statement", "").strip()
     cap = ""
-    if e.get("caption", "").strip():
+    if title or statement:
         place = esc(e.get("place", "").strip())
         cap = ("\n          <figcaption>"
                + (f"<span>{place}</span>" if place else "")
-               + f'<p>{esc(e["caption"].strip())}</p></figcaption>')
+               + (f"<b>{esc(title)}</b>" if title else "")
+               + (f"<p>{esc(statement)}</p>" if statement else "")
+               + "</figcaption>")
 
     # the newest frame is the one above the fold, so it is the one not deferred
     lazy = "" if n == total else ' loading="lazy"'
@@ -198,8 +316,7 @@ def entry_html(e, n, total):
 
 
 def build_biweekly(index_html):
-    entries = json.loads(LOG_DATA.read_text())["entries"]
-    seen = set()
+    entries, seen = json.loads(LOG_DATA.read_text())["entries"], set()
     for e in entries:
         if e["id"] in seen:
             sys.exit(f"duplicate biweekly id: {e['id']}")
@@ -212,80 +329,51 @@ def build_biweekly(index_html):
     if not entries:
         body = '      <p class="log__empty">Nothing posted yet.</p>'
 
-    head = lift(index_html, r'<meta charset="utf-8">.*?<link rel="stylesheet" href="assets/site\.css">', "head")
-    head = head.replace("<title>Eli — Photography</title>", "<title>Biweekly — Eli</title>")
-    head = head.replace('<meta name="description" content="Eli — photographer, Washington DC.">',
-                        '<meta name="description" content="Biweekly — a new photograph every other week.">')
-    head = head.replace('<meta property="og:title" content="Eli — Photography">',
-                        '<meta property="og:title" content="Biweekly — Eli">')
-    head = head.replace('<meta property="og:description" content="Portrait, landscape and street.">',
-                        '<meta property="og:description" content="A new photograph every other week.">')
+    page = (f'{page_head("Photography class", "Biweekly", "One new frame every other week.")}\n\n'
+            f'<section class="section section--log">\n'
+            f'  <div class="log" id="log">\n{body}\n  </div>\n'
+            f'</section>')
+    return shell(index_html, "biweekly", "Biweekly",
+                 "Biweekly — a new photograph every other week.", page), total
 
-    sprite = lift(index_html, r'<!-- Brand mark\..*?</svg>\n', "brand mark sprite")
-    header = relink(lift(index_html, r'<header class="header".*?</header>', "header"))
-    footer = relink(lift(index_html, r'<footer class="footer">.*?</footer>', "footer"))
-    lightbox = lift(index_html, r'<div class="lightbox".*?\n</div>', "lightbox")
 
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-{head}
-</head>
-<body>
+# ----------------------------------------------------------------- driver
 
-{sprite}
-{header}
+def build():
+    data, by_id = load_gallery()
+    inner, home_tally = groups_block(data, by_id, "home")
+    index_html = swap_groups(PAGE.read_text(), inner)
 
-<!-- ============================ PAGE HEAD ============================ -->
-<section class="page-head" id="top">
-  <div class="reveal">
-    <svg viewBox="0 0 91.93 100" class="mark head__mark" aria-hidden="true"><use href="#mark"/></svg>
-    <span class="eyebrow">Photography class</span>
-    <h1 class="h-display">Biweekly</h1>
-    <p class="lede">One new frame every other week.</p>
-  </div>
-</section>
-
-<!-- ============================ LOG ============================ -->
-<!-- Generated from data/biweekly.json by tools/build.py — do not edit by hand -->
-<section class="section section--log">
-  <div class="log" id="log">
-{body}
-  </div>
-</section>
-
-{footer}
-
-{lightbox}
-
-<script src="assets/site.js"></script>
-
-</body>
-</html>
-"""
+    files = [(PAGE, index_html)]
+    portfolio, tally = build_portfolio(index_html, data, by_id)
+    files.append((ROOT / "portfolio.html", portfolio))
+    files.append((ROOT / "contact.html", build_contact(index_html)))
+    log, log_n = build_biweekly(index_html)
+    files.append((ROOT / "biweekly.html", log))
+    shells = build_pages(index_html)
+    files += [(path, text) for path, text, _, _ in shells]
+    return files, tally, home_tally, log_n, shells
 
 
 if __name__ == "__main__":
-    new, blocks, n = build()
-    log_page = build_biweekly(new)
-    log_n = len(json.loads(LOG_DATA.read_text())["entries"])
+    files, tally, home_tally, log_n, shells = build()
     check = "--check" in sys.argv
 
     if check:
-        stale = []
-        if new != PAGE.read_text():
-            stale.append("index.html")
-        if not LOG_PAGE.exists() or log_page != LOG_PAGE.read_text():
-            stale.append("biweekly.html")
+        stale = [p.name for p, text in files
+                 if not p.exists() or p.read_text() != text]
         if stale:
             sys.exit(f"stale: {', '.join(stale)} — run tools/build.py")
-        print("index.html and biweekly.html match their data")
+        print("every generated page matches its data")
     else:
-        PAGE.write_text(new)
-        LOG_PAGE.write_text(log_page)
+        for path, text in files:
+            path.write_text(text)
 
-    for g, count, cols, _ in blocks:
-        print(f"  {g:<7} {count:>2} frames  {cols:>3} cols"
+    for g, count, cols in tally + home_tally:
+        print(f"  {g:<16}{count:>2} frames {cols:>4} cols"
               + ("" if cols % 12 == 0 else f"   (ragged tail {cols % 12})"))
-    print(f"  {n} frames total")
+    print(f"  {sum(c for _, c, _ in tally)} frames in the portfolio")
     print(f"  biweekly {log_n} {'entry' if log_n == 1 else 'entries'}")
+    written = ", ".join(s for _, _, s, done in shells if not done)
+    if written:
+        print(f"  still to write: {written}")

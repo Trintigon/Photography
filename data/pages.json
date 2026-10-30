@@ -1,0 +1,40 @@
+{
+  "_comment": "The tabs that are shells until Eli writes them. Each becomes <slug>.html with the site's header, footer and heading, and one visible note in place of the body. Fill one in by replacing its \"note\" with a \"body\" array of paragraphs; the build will render those instead and drop the placeholder styling.",
+  "pages": [
+    {
+      "slug": "about",
+      "nav": "About",
+      "eyebrow": "Artist bio",
+      "title": "About",
+      "note": "Two or three paragraphs in your own voice: what pulls you to a picture, how you work, what you are chasing at the moment."
+    },
+    {
+      "slug": "education",
+      "nav": "Education",
+      "eyebrow": "Relevant education and certificates",
+      "title": "Education",
+      "note": "Courses, workshops and certificates, newest first. Name, where, and the year."
+    },
+    {
+      "slug": "tips",
+      "nav": "Tips",
+      "eyebrow": "Advice",
+      "title": "Tips",
+      "note": "What you would tell someone picking up a camera this week. A handful of specifics beats a long list."
+    },
+    {
+      "slug": "resume",
+      "nav": "Resume",
+      "eyebrow": "Accomplishments and experience",
+      "title": "Resume",
+      "note": "Shoots you have been paid or asked to do, shows, placements, awards, and anything a client would want to know. Newest first."
+    },
+    {
+      "slug": "ap-work",
+      "nav": "AP Work",
+      "eyebrow": "AP Photography",
+      "title": "AP Work",
+      "note": "Your sustained investigation: the question driving it, and the frames as they come. Send me the images and I will lay them out like the Biweekly page."
+    }
+  ]
+}
