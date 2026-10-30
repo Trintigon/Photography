@@ -542,7 +542,11 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
   width:auto;max-width:100%;padding:1.1rem 0 0;
   font-size:.86rem;line-height:1.6;color:var(--ink-dim);
 }
-.entry__frame figcaption p{margin:.4rem 0 0;max-width:52ch;font-size:inherit;color:inherit}
+.entry__frame figcaption b{font-size:1.5rem;line-height:1.2}
+.entry__frame figcaption p{margin:.7rem 0 0;max-width:62ch;font-size:inherit;color:inherit}
+/* the exposure line is reference, not reading */
+.entry__exif{margin-top:.9rem!important;font-size:.7rem;letter-spacing:.1em;
+  color:var(--ink-faint);font-variant-numeric:tabular-nums}
 .log__empty{
   border-top:1px solid var(--line);padding-top:1.4rem;margin:0;
   font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-faint);

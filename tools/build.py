@@ -290,15 +290,18 @@ def entry_html(e, n, total):
 
     # The class asks for two things under each frame: a title, and a short
     # explanation in art language of how the choices carry the theme word.
+    # The exposure line is optional and sits under the statement.
     title = e.get("title", "").strip()
     statement = e.get("statement", "").strip()
+    exif = e.get("exif", "").strip()
     cap = ""
-    if title or statement:
+    if title or statement or exif:
         place = esc(e.get("place", "").strip())
         cap = ("\n          <figcaption>"
                + (f"<span>{place}</span>" if place else "")
                + (f"<b>{esc(title)}</b>" if title else "")
                + (f"<p>{esc(statement)}</p>" if statement else "")
+               + (f'<p class="entry__exif">{esc(exif)}</p>' if exif else "")
                + "</figcaption>")
 
     # the newest frame is the one above the fold, so it is the one not deferred
