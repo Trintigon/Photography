@@ -1,41 +1,55 @@
 {
-  "_comment": "One entry per theme word, oldest first. Numbering follows this order; the page shows them newest first. Images live in images/biweekly/<id>.jpg. title and statement are the two pieces the class asks for: a title, and a short explanation in art language of how the choices carry the theme word. Retired frames keep their files: moss-cabin.jpg and train-window.jpg are still here, just not listed.",
+  "_comment": "One entry per theme word, oldest first. Numbering follows this order; the page shows them newest first. Images live in images/biweekly/<id>.jpg. title and statement are the two pieces the class asks for: a title, and a short explanation in art language of how the choices carry the theme word. exif is the optional technical line under the statement. Retired frames keep their files: moss-cabin.jpg and train-window.jpg are still here, just not listed.",
   "entries": [
     {
       "id": "hot",
       "prompt": "Hot",
-      "date": "",
-      "title": "",
-      "statement": "",
+      "date": "2025",
+      "title": "Red Air",
+      "statement": "I shot this with a 2.6 second exposure, so the firework's light had time to soak into the smoke and turn the whole cloud red. The warm reds and oranges against the black, low-key background create strong contrast, and the brightest spot, the white-hot core by his hands, becomes the emphasis. I kept the person on the left side and let the smoke take up the rest of the frame, which gives it movement and makes the glow feel like it's spreading out. The soft texture of the smoke and the sparks dripping toward the ground make the air itself look hot.",
       "place": "",
+      "exif": "Nikon D7100 · 2.6s · f/22 · ISO 4000",
       "alt": "A figure lit by a burning firework at night, smoke glowing orange around them"
     },
     {
       "id": "drip",
       "prompt": "Drip",
-      "date": "",
-      "title": "",
-      "statement": "",
+      "date": "2025-01-01",
+      "title": "7-Eleven Through the Rain",
+      "statement": "I took this through a rain-covered car window at night and focused past the glass onto the 7-Eleven sign, so every drip on the window turned into a soft circle of light. The drops become a pattern that covers the whole frame and gives it a bubbly texture, while the sign's stripes add diagonal lines and a little red, orange and green. I left the dark edge of the car on the left as a frame, so it feels like you're sitting inside looking out. The artificial light and low-key setting make the water the brightest part of the photo, which is how I wanted to show the word drip.",
       "place": "",
+      "exif": "Nikon D7100 · 1/800 · f/13 · ISO 10159",
       "alt": "Raindrops on glass, thrown out of focus, a lit convenience-store sign behind them"
     },
     {
       "id": "forgotten-places",
       "prompt": "Forgotten Places",
-      "date": "",
-      "title": "",
-      "statement": "",
-      "place": "",
+      "date": "2026-10-18",
+      "title": "Parked for Good",
+      "statement": "This car isn't going anywhere anymore. It's been painted over and turned into a planter, with plants growing out of the roof and trunk, which is what made it feel forgotten to me. I shot it from the side with the car across the middle of the frame and used layering: the chalk \"Kensington\" and leaf drawings on the street in the foreground, the car in the middle ground, and the fence, mural and \"For Lease\" sign in the background. The bright colors and hard natural light show every texture, and the empty storefront sign adds to the feeling that the whole spot was left behind.",
+      "place": "Kensington",
+      "exif": "Nikon D7100 · 1/1000 · f/3.8 · ISO 100",
       "alt": "A painted car parked against a mural, shrubs and tall weeds growing out of it"
     },
     {
       "id": "golden-hour",
       "prompt": "Golden Hour",
       "date": "",
-      "title": "",
-      "statement": "",
+      "title": "Bars of Light",
+      "statement": "I took this under an underpass when the sun was low and coming in from the side, so the light came through the gaps and laid stripes of warm light across the concrete wall. The repeating light and dark bars create pattern and rhythm, and my own shadow with the camera up lands inside the middle stripe, which makes it the point of emphasis. The golden color against the cool gray concrete creates contrast, and the long angled shadows on the ground only happen at this time of day. Instead of photographing the sunset itself, I wanted to show what golden hour light does to an ordinary wall.",
       "place": "",
-      "alt": "Low sun throwing the shadow of a cyclist onto a concrete underpass wall"
+      "exif": "Nikon D7100 · 1/500 · f/4.5 · ISO 400",
+      "alt": "Low sun through an underpass throwing stripes of light on a concrete wall, with the photographer's own shadow, camera raised, inside the middle stripe"
+    },
+    {
+      "id": "falling",
+      "prompt": "Falling",
+      "date": "",
+      "title": "Nothing Below",
+      "statement": "I placed the window cleaner small in the bottom right corner and left the rest of the frame as open blue sky, so the negative space becomes the main subject. The hard vertical edge of the concrete building and his rope create a leading line that runs straight down, pulling the eye in the direction he is moving. The contrast in scale between the tiny figure and the huge empty sky makes the drop feel bigger and a little uneasy. \"Falling\" here isn't a dramatic fall but a slow, controlled one, where the only thing holding him is a thin line against all that space.",
+      "place": "",
+      "exif": "",
+      "alt": "A window cleaner suspended on a rope below the roof of a concrete building, small in the lower right of an otherwise empty blue sky"
     }
   ]
 }
