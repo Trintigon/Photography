@@ -1,0 +1,114 @@
+{
+  "_comment": "Q1 class projects, in the order they were set. Images live in images/projects/. A caption is the title, the date and the medium — nothing else. An image marked \"lead\": true spans the full width of its project instead of sitting in the grid.",
+  "projects": [
+    {
+      "id": "name-logo",
+      "title": "Name Logo Design",
+      "date": "September 2026",
+      "medium": "Digital design",
+      "images": [
+        {
+          "file": "name-logo.jpg",
+          "alt": "A heart drawn in a single thin line, broken by a horizontal bar across the upper left and a dot at the lower right"
+        }
+      ]
+    },
+    {
+      "id": "mood-board",
+      "title": "Mood / Inspiration Board",
+      "date": "September 2026",
+      "medium": "Digital collage",
+      "images": [
+        {
+          "file": "mood-board.jpg",
+          "alt": "A collage of photographs — a foggy coastline, a Kyoto street with a bus, a flag in lights, a church spire, a figure fishing — interleaved with song lyric cards"
+        }
+      ]
+    },
+    {
+      "id": "20-curiosities",
+      "title": "20 Curiosities",
+      "date": "September 2026",
+      "medium": "Written list",
+      "images": [
+        {
+          "file": "20-curiosities.jpg",
+          "alt": "A numbered list of subjects, among them natural parks, logos, trains, long exposure, fishing, double exposure and museums"
+        }
+      ]
+    },
+    {
+      "id": "deep-dive-mind-map",
+      "title": "Deep Dive Mind Map",
+      "date": "September 2026",
+      "medium": "Mind map",
+      "images": [
+        {
+          "file": "deep-dive-mind-map.jpg",
+          "alt": "A hand-drawn mind map linking parks, wildlife, invasive species, hiking, pollution and fishing around the question of what nature looks like once it is scheduled"
+        }
+      ]
+    },
+    {
+      "id": "identity-portrait",
+      "title": "Identity Portrait",
+      "date": "October 2026",
+      "medium": "Digital photograph",
+      "images": [
+        {
+          "file": "identity-portrait.jpg",
+          "alt": "A dark room lit green, blue and red, with three figures in one long exposure — one at a computer, one lying down with a phone, one playing bass"
+        }
+      ]
+    },
+    {
+      "id": "favorite-artwork",
+      "title": "Favorite Personal Artwork",
+      "date": "October 2026",
+      "medium": "Digital photograph",
+      "images": [
+        {
+          "file": "favorite-artwork.jpg",
+          "alt": "A white box truck passing a wall-sized American flag in lights, the flag drawn out by motion"
+        }
+      ]
+    },
+    {
+      "id": "candy-water-droplet",
+      "title": "Candy Water Droplet",
+      "date": "October 2026",
+      "medium": "Digital photography — contact sheet and three prints",
+      "images": [
+        {
+          "file": "candy-droplet-contact-sheet.jpg",
+          "lead": true,
+          "alt": "A contact sheet of thirty candy photographs under coloured light, water droplets across each one"
+        },
+        {
+          "file": "candy-droplet-print-1.jpg",
+          "alt": "Macro photograph of water droplets on red and white candy, each droplet holding an inverted image of the sweets beneath it"
+        },
+        {
+          "file": "candy-droplet-print-2.jpg",
+          "alt": "Macro photograph of water droplets over multicoloured chocolate buttons, each droplet acting as a lens"
+        },
+        {
+          "file": "candy-droplet-print-3.jpg",
+          "alt": "Macro photograph of water droplets over orange, green and yellow sweets, each droplet repeating the colours underneath"
+        }
+      ]
+    },
+    {
+      "id": "artist-study",
+      "title": "Artist Study (after Duane Michals)",
+      "date": "October 2026",
+      "medium": "Photographic sequence",
+      "images": [
+        {
+          "file": "artist-study-sequence.jpg",
+          "alt": "A six-frame black-and-white sequence of a figure working at a desk set on a ping-pong table, the last frame dark"
+        }
+      ]
+    }
+  ]
+}

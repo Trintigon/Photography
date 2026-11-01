@@ -570,3 +570,46 @@ body.lb-open .header{opacity:0;pointer-events:none;transition:opacity .3s var(--
 
 /* a page head with nothing under it should not leave the footer floating */
 .page-head + .section{min-height:34vh}
+
+/* ============================================================
+   PROJECTS
+   One section per class project: a title, the date and the medium,
+   then the work. Frames take their own proportions, so a square
+   logo, a portrait print and a wide contact sheet all sit together
+   without any of them being cropped.
+   ============================================================ */
+.projects{
+  max-width:74rem;margin-inline:auto;
+  display:flex;flex-direction:column;gap:clamp(4rem,10vw,8rem);
+}
+.project__meta{border-top:1px solid var(--line);padding-top:1.1rem;margin-bottom:1.7rem}
+.project__title{
+  font-family:var(--display);font-weight:300;line-height:1.15;margin:0;
+  font-size:clamp(1.5rem,3.4vw,2.2rem);letter-spacing:.01em;
+}
+.project__detail{
+  display:block;margin-top:.6rem;
+  font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-faint);
+}
+.project__frames{
+  display:grid;gap:clamp(.8rem,2vw,1.4rem);
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));
+  align-items:start;
+}
+/* a lone frame is capped by its own shape rather than filling the column */
+.project__frames[data-n="1"]{max-width:min(100%,calc(62vh * var(--ar,1.5)))}
+.project__frame{
+  grid-column:auto;aspect-ratio:var(--ar,1.5);
+  overflow:hidden;background:var(--bg-raise);
+}
+.project__frame--lead{grid-column:1/-1;max-width:min(100%,calc(66vh * var(--ar,1.5)))}
+.project__frame img{width:100%;height:100%;object-fit:contain;transform:none}
+.project__frame::after{display:none}
+.project__frame:hover img,.project__frame:focus-visible img{transform:none}
+
+.prose__more{margin-top:2.4rem}
+
+@media(max-width:760px){
+  .project__frames{grid-template-columns:1fr}
+  .project__frames[data-n="1"],.project__frame--lead{max-width:100%}
+}

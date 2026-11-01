@@ -12,6 +12,7 @@ a generated page, it gets overwritten.
 | --- | --- |
 | `index.html` | hand-written, except the selected strip (`data/gallery.json` → `home`) |
 | `portfolio.html` | `data/gallery.json` → `frames` |
+| `projects.html` | `data/projects.json` |
 | `biweekly.html` | `data/biweekly.json` |
 | `contact.html` | `tools/partials/contact.html` |
 | `about` `education` `tips` `resume` `ap-work` | `data/pages.json` |
@@ -128,3 +129,35 @@ frame stands on its own.
 `biweekly.html` borrows its head, brand mark, header and footer from
 `index.html` at build time, so edit those in `index.html` and rebuild — never in
 `biweekly.html`, which is overwritten.
+
+## Projects
+
+`data/projects.json` drives `projects.html` — the class projects, in the order
+they were set. Images live in `images/projects/`.
+
+```json
+{
+  "id": "candy-water-droplet",
+  "title": "Candy Water Droplet",
+  "date": "October 2026",
+  "medium": "Digital photography — contact sheet and three prints",
+  "images": [
+    { "file": "candy-droplet-contact-sheet.jpg", "lead": true, "alt": "…" },
+    { "file": "candy-droplet-print-1.jpg", "alt": "…" }
+  ]
+}
+```
+
+A caption here is the title, the date and the medium — nothing else. No
+statements, no reflections: those are Eli's to write and go nowhere near the
+build. Frames take their own proportions from the file, so nothing is cropped
+however the shapes are mixed. `"lead": true` gives an image the full width of
+its project instead of a slot in the grid; a project with one image is capped
+by that image's own shape.
+
+## Unwritten pages
+
+A page in `data/pages.json` with no `body` renders its `placeholder` ("Coming
+soon.") and nothing else. Its `note` — the prompt for whoever writes the page —
+is emitted as an HTML comment, so it never reaches a visitor. Keep it that way:
+the live site is read by people who are not Eli.

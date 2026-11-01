@@ -3,6 +3,7 @@
 
   data/gallery.json   ->  the strip inside index.html, and all of portfolio.html
   data/biweekly.json  ->  all of biweekly.html
+  data/projects.json  ->  all of projects.html
   data/pages.json     ->  about / education / tips / resume / ap-work
                           (contact.html is generated too, from index.html's own
                            contact markup)
@@ -21,6 +22,8 @@ PAGE = ROOT / "index.html"
 GALLERY = ROOT / "data" / "gallery.json"
 LOG_DATA = ROOT / "data" / "biweekly.json"
 PAGES_DATA = ROOT / "data" / "pages.json"
+PROJ_DATA = ROOT / "data" / "projects.json"
+PROJ_IMAGES = ROOT / "images" / "projects"
 LOG_IMAGES = ROOT / "images" / "biweekly"
 
 SPAN = {"tile--full": 12, "tile--wide": 8, "tile--half": 6,
@@ -207,23 +210,84 @@ def build_contact(index_html):
                  "Get in touch — Eli, photographer, Washington DC.", body)
 
 
+# --------------------------------------------------------------- projects
+
+def project_html(pr):
+    frames, ratios = [], []
+    for im in pr["images"]:
+        src = PROJ_IMAGES / im["file"]
+        if not src.exists():
+            sys.exit(f"missing image: images/projects/{im['file']}")
+        size = jpeg_size(src)
+        if not size:
+            sys.exit(f"could not read the size of images/projects/{im['file']}")
+        ar = size[0] / size[1]
+        ratios.append(ar)
+        cls = "tile project__frame" + (" project__frame--lead" if im.get("lead") else "")
+        frames.append(
+            f'      <figure class="{cls}" style="--ar:{ar:.4f}" tabindex="0">\n'
+            f'        <img src="images/projects/{im["file"]}" alt="{esc(im["alt"])}"'
+            f' width="{size[0]}" height="{size[1]}" loading="lazy">\n'
+            f'        <svg viewBox="0 0 91.93 100" class="mark tile__mark" aria-hidden="true"><use href="#mark"/></svg>\n'
+            f'      </figure>')
+    # a caption here is the title, the date and the medium — nothing else
+    detail = " · ".join(x for x in (pr.get("date", "").strip(), pr.get("medium", "").strip()) if x)
+    # a lone frame is capped by its own shape so a square does not fill the column
+    single = f' style="--ar:{ratios[0]:.4f}"' if len(ratios) == 1 else ""
+    return (f'    <article class="project reveal" id="{pr["id"]}">\n'
+            f'      <div class="project__meta">\n'
+            f'        <h2 class="project__title">{esc(pr["title"])}</h2>\n'
+            + (f'        <span class="project__detail">{esc(detail)}</span>\n' if detail else "")
+            + f'      </div>\n'
+            f'      <div class="project__frames" data-n="{len(pr["images"])}"{single}>\n'
+            + "\n\n".join(frames)
+            + f'\n      </div>\n'
+            f'    </article>')
+
+
+def build_projects(index_html):
+    projects = json.loads(PROJ_DATA.read_text())["projects"]
+    seen = set()
+    for pr in projects:
+        if pr["id"] in seen:
+            sys.exit(f"duplicate project id: {pr['id']}")
+        seen.add(pr["id"])
+    body = (f'{page_head("Class work", "Projects")}\n\n'
+            f'<section class="section">\n'
+            f'  <div class="projects" id="projects">\n'
+            + "\n\n".join(project_html(pr) for pr in projects)
+            + '\n  </div>\n</section>')
+    return shell(index_html, "projects", "Projects",
+                 "Class projects.", body), len(projects), sum(len(p["images"]) for p in projects)
+
+
 # ----------------------------------------------------------------- shells
 
 def build_pages(index_html):
+    """An unwritten page shows a plain placeholder. The prompt for whoever
+    writes it goes in an HTML comment, never in text a visitor reads."""
     out = []
     for p in json.loads(PAGES_DATA.read_text())["pages"]:
         paras = [x for x in p.get("body", []) if x.strip()]
         if paras:
             inner = "\n".join(f'    <p class="lede">{esc(x)}</p>' for x in paras)
         else:
-            inner = (f'    <p class="lede placeholder">Not written yet — '
-                     f'{esc(p["note"])}</p>')
+            hint = p.get("note", "").replace("--", "-").replace(">", "")
+            inner = (f'    <!-- To write: {hint} -->\n'
+                     f'    <p class="lede placeholder">'
+                     f'{esc(p.get("placeholder", "Coming soon."))}</p>')
+        link = p.get("link")
+        if link:
+            inner += (f'\n    <p class="prose__more">'
+                      f'<a class="link-line" href="{esc(link["href"])}">{esc(link["label"])}</a></p>')
         body = (f'{page_head(p["eyebrow"], p["title"])}\n\n'
                 f'<section class="section">\n'
                 f'  <div class="prose reveal">\n{inner}\n  </div>\n'
                 f'</section>')
         out.append((ROOT / f'{p["slug"]}.html',
-                    shell(index_html, p["slug"], p["title"], p["note"], body),
+                    shell(index_html, p["slug"], p["title"],
+                          p.get("description", f'{p["title"]} — Eli, photographer, Washington DC.'),
+                          body),
                     p["slug"], bool(paras)))
     return out
 
@@ -351,15 +415,17 @@ def build():
     portfolio, tally = build_portfolio(index_html, data, by_id)
     files.append((ROOT / "portfolio.html", portfolio))
     files.append((ROOT / "contact.html", build_contact(index_html)))
+    projects, n_proj, n_proj_img = build_projects(index_html)
+    files.append((ROOT / "projects.html", projects))
     log, log_n = build_biweekly(index_html)
     files.append((ROOT / "biweekly.html", log))
     shells = build_pages(index_html)
     files += [(path, text) for path, text, _, _ in shells]
-    return files, tally, home_tally, log_n, shells
+    return files, tally, home_tally, log_n, shells, (n_proj, n_proj_img)
 
 
 if __name__ == "__main__":
-    files, tally, home_tally, log_n, shells = build()
+    files, tally, home_tally, log_n, shells, proj = build()
     check = "--check" in sys.argv
 
     if check:
@@ -377,6 +443,7 @@ if __name__ == "__main__":
               + ("" if cols % 12 == 0 else f"   (ragged tail {cols % 12})"))
     print(f"  {sum(c for _, c, _ in tally)} frames in the portfolio")
     print(f"  biweekly {log_n} {'entry' if log_n == 1 else 'entries'}")
+    print(f"  projects {proj[0]} projects, {proj[1]} images")
     written = ", ".join(s for _, _, s, done in shells if not done)
     if written:
         print(f"  still to write: {written}")
