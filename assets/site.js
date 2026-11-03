@@ -4,6 +4,21 @@
   "use strict";
 
   var $ = function (id) { return document.getElementById(id); };
+  var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Tell CSS that JS is running, so it can hold images back until they
+     have actually decoded. Without this class they are simply visible. */
+  document.documentElement.classList.add("js");
+
+  /* ---------- images arrive rather than snap ---------- */
+  var fade = function (img) { img.classList.add("is-loaded"); };
+  Array.prototype.forEach.call(document.querySelectorAll(".tile img, .band img"), function (img) {
+    if (img.complete && img.naturalWidth) fade(img);
+    else {
+      img.addEventListener("load", function () { fade(img); }, { once: true });
+      img.addEventListener("error", function () { fade(img); }, { once: true });
+    }
+  });
 
   /* ---------- header state ---------- */
   var header = $("header");
@@ -38,7 +53,7 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    }, { threshold: 0.05, rootMargin: "0px 0px -6% 0px" });
     revealables.forEach(function (el) { io.observe(el); });
   } else {
     revealables.forEach(function (el) { el.classList.add("is-in"); });
@@ -48,19 +63,48 @@
   var grids = Array.prototype.slice.call(document.querySelectorAll(".grid"));
   var tiles = Array.prototype.slice.call(document.querySelectorAll(".tile"));
   var filters = $("filters");
-  if (filters) filters.addEventListener("click", function (e) {
-    var btn = e.target.closest("button");
-    if (!btn) return;
-    var cat = btn.dataset.filter;
+  if (filters) {
+    /* One indicator that travels between the labels, rather than four
+       that fade independently. It is decoration, so it is built here
+       and never ships in the markup. */
+    var bar = document.createElement("span");
+    bar.className = "filters__bar";
+    bar.setAttribute("aria-hidden", "true");
+    filters.appendChild(bar);
 
-    this.querySelectorAll("button").forEach(function (b) {
-      b.classList.toggle("is-active", b === btn);
-    });
+    var moveBar = function (btn) {
+      if (!btn) { bar.style.opacity = "0"; return; }
+      var a = filters.getBoundingClientRect(), b = btn.getBoundingClientRect();
+      bar.style.opacity = "1";
+      bar.style.width = "1px";
+      bar.style.transform = "translateX(" + (b.left - a.left) + "px) scaleX(" + b.width + ")";
+    };
+    var sync = function () { moveBar(filters.querySelector("button.is-active")); };
 
-    grids.forEach(function (grid) {
-      grid.classList.toggle("is-hidden", cat !== "all" && grid.dataset.group !== cat);
+    /* No transition on the first placement, or it slides in from zero. */
+    bar.style.transition = "none";
+    requestAnimationFrame(function () {
+      sync();
+      requestAnimationFrame(function () { bar.style.transition = ""; });
     });
-  });
+    window.addEventListener("resize", sync, { passive: true });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sync);
+
+    filters.addEventListener("click", function (e) {
+      var btn = e.target.closest("button");
+      if (!btn) return;
+      var cat = btn.dataset.filter;
+
+      Array.prototype.forEach.call(this.querySelectorAll("button"), function (b) {
+        b.classList.toggle("is-active", b === btn);
+      });
+      moveBar(btn);
+
+      grids.forEach(function (grid) {
+        grid.classList.toggle("is-hidden", cat !== "all" && grid.dataset.group !== cat);
+      });
+    });
+  }
 
   /* ---------- lightbox ---------- */
   var lb = $("lightbox");
@@ -89,6 +133,7 @@
   };
 
   var open = function (tile) {
+    if (still) lbImg.style.transition = "none";
     show(visible().indexOf(tile));
     lb.classList.add("is-open");
     document.body.classList.add("lb-open");

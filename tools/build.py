@@ -172,9 +172,10 @@ def shell(index_html, slug, title, description, body):
 
 def page_head(eyebrow, title, lede=""):
     lede = f'\n    <p class="lede">{esc(lede)}</p>' if lede else ""
+    # no brand mark here: it already sits in the header, and repeating it
+    # under every page title is decoration standing in for hierarchy
     return (f'<section class="page-head" id="top">\n'
             f'  <div class="reveal">\n'
-            f'    <svg viewBox="0 0 91.93 100" class="mark head__mark" aria-hidden="true"><use href="#mark"/></svg>\n'
             f'    <span class="eyebrow">{esc(eyebrow)}</span>\n'
             f'    <h1 class="h-display">{esc(title)}</h1>{lede}\n'
             f'  </div>\n'
