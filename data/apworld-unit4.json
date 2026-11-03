@@ -1,0 +1,1063 @@
+{
+ "title": "AP World — Unit 4 “Best Parts” Cut",
+ "unit": "Unit 4: Transoceanic Interconnections (1450–1750)",
+ "note": "Segments play as official YouTube embeds (start/end), in order. Topics follow Mr. Seat’s “Nine Topics for Unit 4” review deck; 10–11 are bonus.",
+ "topics": [
+  {
+   "n": 1,
+   "title": "Navigation technology",
+   "bonus": false,
+   "segments": [
+    {
+     "video_id": "QbOGCeNfubE",
+     "start": 11,
+     "end": 131,
+     "label": "Compass, astrolabe, caravel, lateen sail, carrack, maps",
+     "video_title": "Navigating New Worlds: Technological Advances of the Age of Discovery | 3-Minute History",
+     "channel": "History Savant",
+     "embed": "https://www.youtube-nocookie.com/embed/QbOGCeNfubE?start=11&end=131",
+     "watch": "https://www.youtube.com/watch?v=QbOGCeNfubE&t=11s"
+    },
+    {
+     "video_id": "NjEGncridoQ",
+     "start": 393,
+     "end": 439,
+     "label": "Columbus myths + dead reckoning",
+     "video_title": "Columbus, Vasco da Gama, and Zheng He - 15th Century Mariners: Crash Course World History #21",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/NjEGncridoQ?start=393&end=439",
+     "watch": "https://www.youtube.com/watch?v=NjEGncridoQ&t=393s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Magnetic compass",
+     "definition": "Let sailors find direction with no land in sight, so they no longer had to hug the coast.",
+     "video_id": "QbOGCeNfubE",
+     "t": 18,
+     "channel": "History Savant",
+     "link": "https://www.youtube.com/watch?v=QbOGCeNfubE&t=18s"
+    },
+    {
+     "term": "Astrolabe",
+     "definition": "A Greek/Islamic tool for measuring the height of stars, which gave sailors their latitude.",
+     "video_id": "QbOGCeNfubE",
+     "t": 29,
+     "channel": "History Savant",
+     "link": "https://www.youtube.com/watch?v=QbOGCeNfubE&t=29s"
+    },
+    {
+     "term": "Caravel",
+     "definition": "A small, nimble Portuguese ship mixing southern European and North African designs. It was built for long open-ocean voyages.",
+     "video_id": "QbOGCeNfubE",
+     "t": 44,
+     "channel": "History Savant",
+     "link": "https://www.youtube.com/watch?v=QbOGCeNfubE&t=44s"
+    },
+    {
+     "term": "Lateen sail",
+     "definition": "A triangular sail that let caravels sail closer to the wind.",
+     "video_id": "QbOGCeNfubE",
+     "t": 53,
+     "channel": "History Savant",
+     "link": "https://www.youtube.com/watch?v=QbOGCeNfubE&t=53s"
+    },
+    {
+     "term": "Carrack",
+     "definition": "A bigger, sturdier ship than the caravel. It could carry more supplies, stay at sea longer and survive the Atlantic.",
+     "video_id": "QbOGCeNfubE",
+     "t": 65,
+     "channel": "History Savant",
+     "link": "https://www.youtube.com/watch?v=QbOGCeNfubE&t=65s"
+    },
+    {
+     "term": "Portolan chart",
+     "definition": "A detailed nautical map showing coastlines, harbors and compass directions.",
+     "video_id": "QbOGCeNfubE",
+     "t": 107,
+     "channel": "History Savant",
+     "link": "https://www.youtube.com/watch?v=QbOGCeNfubE&t=107s"
+    },
+    {
+     "term": "Dead reckoning",
+     "definition": "Working out your position from direction, speed and time (timed with an hourglass). It was Columbus’s main navigation method.",
+     "video_id": "NjEGncridoQ",
+     "t": 421,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=NjEGncridoQ&t=421s"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Portuguese & Chinese exploration (Zheng He vs. da Gama)",
+   "bonus": false,
+   "segments": [
+    {
+     "video_id": "NjEGncridoQ",
+     "start": 127,
+     "end": 265,
+     "label": "Zheng He’s treasure fleet — and why Ming China quit",
+     "video_title": "Columbus, Vasco da Gama, and Zheng He - 15th Century Mariners: Crash Course World History #21",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/NjEGncridoQ?start=127&end=265",
+     "watch": "https://www.youtube.com/watch?v=NjEGncridoQ&t=127s"
+    },
+    {
+     "video_id": "NjEGncridoQ",
+     "start": 264,
+     "end": 390,
+     "label": "Prince Henry, da Gama, and the Portuguese “trading post empire”",
+     "video_title": "Columbus, Vasco da Gama, and Zheng He - 15th Century Mariners: Crash Course World History #21",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/NjEGncridoQ?start=264&end=390",
+     "watch": "https://www.youtube.com/watch?v=NjEGncridoQ&t=264s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Zheng He / treasure ships",
+     "definition": "Ming admiral who led 7 huge Indian Ocean voyages (1405–1433): 300+ ships, 27,000 crew, flagships 400+ ft long.",
+     "video_id": "NjEGncridoQ",
+     "t": 127,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=NjEGncridoQ&t=127s"
+    },
+    {
+     "term": "Tribute system / kowtow",
+     "definition": "Foreign rulers bowed to the Chinese emperor (the kowtow) and gave him gifts in exchange for the right to trade with China.",
+     "video_id": "NjEGncridoQ",
+     "t": 185,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=NjEGncridoQ&t=185s"
+    },
+    {
+     "term": "Prince Henry the Navigator",
+     "definition": "Portuguese prince who wasn’t a navigator himself. He funded sailors and collected nautical knowledge and maps.",
+     "video_id": "NjEGncridoQ",
+     "t": 287,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=NjEGncridoQ&t=287s"
+    },
+    {
+     "term": "Vasco da Gama",
+     "definition": "First of Henry’s protégés to round Africa. He reached Calicut, India in 1498 looking for “gold and Christians.”",
+     "video_id": "NjEGncridoQ",
+     "t": 319,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=NjEGncridoQ&t=319s"
+    },
+    {
+     "term": "Trading post empire",
+     "definition": "Portugal didn’t take big territory in the Indian Ocean. It captured fortified coastal cities and controlled trade from them.",
+     "video_id": "NjEGncridoQ",
+     "t": 347,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=NjEGncridoQ&t=347s"
+    },
+    {
+     "term": "Cartaz",
+     "definition": "A Portuguese trade permit that merchant ships were forced to buy, or risk capture. Basically extortion.",
+     "video_id": "NjEGncridoQ",
+     "t": 365,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=NjEGncridoQ&t=365s"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "State-sponsored voyages & conquest (Spain in the Americas)",
+   "bonus": false,
+   "segments": [
+    {
+     "video_id": "NjEGncridoQ",
+     "start": 459,
+     "end": 495,
+     "label": "Line of Demarcation: the Pope splits the world",
+     "video_title": "Columbus, Vasco da Gama, and Zheng He - 15th Century Mariners: Crash Course World History #21",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/NjEGncridoQ?start=459&end=495",
+     "watch": "https://www.youtube.com/watch?v=NjEGncridoQ&t=459s"
+    },
+    {
+     "video_id": "suRAVIndO4Y",
+     "start": 151,
+     "end": 180,
+     "label": "La Malinche: language as a weapon",
+     "video_title": "Aztecs: Arrival of Cortes and the Conquistadors",
+     "channel": "Kings and Generals",
+     "embed": "https://www.youtube-nocookie.com/embed/suRAVIndO4Y?start=151&end=180",
+     "watch": "https://www.youtube.com/watch?v=suRAVIndO4Y&t=151s"
+    },
+    {
+     "video_id": "suRAVIndO4Y",
+     "start": 423,
+     "end": 454,
+     "label": "The Tlaxcalan alliance: a “Spanish” army that was 95% Native",
+     "video_title": "Aztecs: Arrival of Cortes and the Conquistadors",
+     "channel": "Kings and Generals",
+     "embed": "https://www.youtube-nocookie.com/embed/suRAVIndO4Y?start=423&end=454",
+     "watch": "https://www.youtube.com/watch?v=suRAVIndO4Y&t=423s"
+    },
+    {
+     "video_id": "xPm8E-zWwsQ",
+     "start": 397,
+     "end": 504,
+     "label": "Cajamarca 1532: the Requerimiento, a thrown Bible, and an ambush",
+     "video_title": "Spanish Conquest of the Incan Empire",
+     "channel": "Kings and Generals",
+     "embed": "https://www.youtube-nocookie.com/embed/xPm8E-zWwsQ?start=397&end=504",
+     "watch": "https://www.youtube.com/watch?v=xPm8E-zWwsQ&t=397s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Line of Demarcation (1494)",
+     "definition": "Pope Alexander VI settled a Spain–Portugal dispute by splitting the world’s “unclaimed” land between the two.",
+     "video_id": "NjEGncridoQ",
+     "t": 459,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=NjEGncridoQ&t=459s"
+    },
+    {
+     "term": "Conquistador",
+     "definition": "Spanish conqueror in the Americas, like Cortés (Aztecs) or Pizarro (Inca).",
+     "video_id": "xPm8E-zWwsQ",
+     "t": 20,
+     "channel": "Kings and Generals",
+     "link": "https://www.youtube.com/watch?v=xPm8E-zWwsQ&t=20s"
+    },
+    {
+     "term": "Sapa Inca",
+     "definition": "The supreme ruler of the Inca Empire, treated as a god. Without him the empire couldn’t function.",
+     "video_id": "xPm8E-zWwsQ",
+     "t": 339,
+     "channel": "Kings and Generals",
+     "link": "https://www.youtube.com/watch?v=xPm8E-zWwsQ&t=339s"
+    },
+    {
+     "term": "Requerimiento",
+     "definition": "A Spanish document read aloud to Native peoples: accept the Church and the king or face war and slavery.",
+     "video_id": "xPm8E-zWwsQ",
+     "t": 446,
+     "channel": "Kings and Generals",
+     "link": "https://www.youtube.com/watch?v=xPm8E-zWwsQ&t=446s"
+    },
+    {
+     "term": "La Malinche",
+     "definition": "Indigenous woman who spoke Maya and Nahuatl and became Cortés’s interpreter. Language was a weapon as important as horses or cannons.",
+     "video_id": "suRAVIndO4Y",
+     "t": 151,
+     "channel": "Kings and Generals",
+     "link": "https://www.youtube.com/watch?v=suRAVIndO4Y&t=151s"
+    },
+    {
+     "term": "Tlaxcala",
+     "definition": "A city-state permanently at war with the Aztecs. It allied with Cortés, and his army ended up less than 5% Spanish.",
+     "video_id": "suRAVIndO4Y",
+     "t": 423,
+     "channel": "Kings and Generals",
+     "link": "https://www.youtube.com/watch?v=suRAVIndO4Y&t=423s"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "The Columbian Exchange",
+   "bonus": false,
+   "segments": [
+    {
+     "video_id": "HQPA5oNpfM4",
+     "start": 93,
+     "end": 194,
+     "label": "Disease: why 50–90% of Native Americans died",
+     "video_title": "The Columbian Exchange: Crash Course World History #23",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/HQPA5oNpfM4?start=93&end=194",
+     "watch": "https://www.youtube.com/watch?v=HQPA5oNpfM4&t=93s"
+    },
+    {
+     "video_id": "HQPA5oNpfM4",
+     "start": 350,
+     "end": 447,
+     "label": "Animals: pigs, horses, oxen remake the Americas",
+     "video_title": "The Columbian Exchange: Crash Course World History #23",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/HQPA5oNpfM4?start=350&end=447",
+     "watch": "https://www.youtube.com/watch?v=HQPA5oNpfM4&t=350s"
+    },
+    {
+     "video_id": "HQPA5oNpfM4",
+     "start": 447,
+     "end": 579,
+     "label": "Plants: New World crops feed the Old World",
+     "video_title": "The Columbian Exchange: Crash Course World History #23",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/HQPA5oNpfM4?start=447&end=579",
+     "watch": "https://www.youtube.com/watch?v=HQPA5oNpfM4&t=447s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Columbian Exchange",
+     "definition": "The transfer of plants, animals, diseases and people between the Old World and the New World after 1492.",
+     "video_id": "HQPA5oNpfM4",
+     "t": 4,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=HQPA5oNpfM4&t=4s"
+    },
+    {
+     "term": "Smallpox",
+     "definition": "The deadliest Old World disease in the Americas. With other diseases it killed most Native Americans, who had no immunity.",
+     "video_id": "HQPA5oNpfM4",
+     "t": 78,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=HQPA5oNpfM4&t=78s"
+    },
+    {
+     "term": "New World crops (potato, corn, manioc)",
+     "definition": "Calorie-dense American crops that boosted Old World populations: potatoes in Europe, manioc (cassava) in Africa, sweet potatoes in China.",
+     "video_id": "HQPA5oNpfM4",
+     "t": 446,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=HQPA5oNpfM4&t=446s"
+    },
+    {
+     "term": "Old World animals",
+     "definition": "Pigs, horses, cattle and oxen brought by Europeans that reshaped American land and Native life.",
+     "video_id": "HQPA5oNpfM4",
+     "t": 350,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=HQPA5oNpfM4&t=350s"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Trading-post empires & limiting trade (Tokugawa Japan)",
+   "bonus": false,
+   "segments": [
+    {
+     "video_id": "3tpJbjKJeE0",
+     "start": 20,
+     "end": 127,
+     "label": "Sakoku: why Tokugawa Japan kicked out everyone but the Dutch",
+     "video_title": "Why did Japan ban everyone except for the Dutch? (Short Animated Documentary)",
+     "channel": "History Matters",
+     "embed": "https://www.youtube-nocookie.com/embed/3tpJbjKJeE0?start=20&end=127",
+     "watch": "https://www.youtube.com/watch?v=3tpJbjKJeE0&t=20s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Tokugawa shogunate",
+     "definition": "The military government that unified Japan after a civil war in the early 1600s and moved to control foreign contact.",
+     "video_id": "3tpJbjKJeE0",
+     "t": 67,
+     "channel": "History Matters",
+     "link": "https://www.youtube.com/watch?v=3tpJbjKJeE0&t=67s"
+    },
+    {
+     "term": "Sakoku (closed country)",
+     "definition": "Japan’s policy of strictly limiting foreign trade and contact. Only the Dutch could trade, and only through Nagasaki.",
+     "video_id": "3tpJbjKJeE0",
+     "t": 2,
+     "channel": "History Matters",
+     "link": "https://www.youtube.com/watch?v=3tpJbjKJeE0&t=2s"
+    },
+    {
+     "term": "Nagasaki / Dutch monopoly",
+     "definition": "The one port open to the Dutch East India Company, which had to follow Japanese rules and never preach Christianity.",
+     "video_id": "3tpJbjKJeE0",
+     "t": 103,
+     "channel": "History Matters",
+     "link": "https://www.youtube.com/watch?v=3tpJbjKJeE0&t=103s"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Labor shortage → the Atlantic slave trade",
+   "bonus": false,
+   "segments": [
+    {
+     "video_id": "dnV_MTFEGIY",
+     "start": 39,
+     "end": 74,
+     "label": "The numbers: 10–12 million, mostly to Brazil & the Caribbean",
+     "video_title": "The Atlantic Slave Trade: Crash Course World History #24",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/dnV_MTFEGIY?start=39&end=74",
+     "watch": "https://www.youtube.com/watch?v=dnV_MTFEGIY&t=39s"
+    },
+    {
+     "video_id": "dnV_MTFEGIY",
+     "start": 113,
+     "end": 259,
+     "label": "How Europeans got enslaved Africans + life on a sugar plantation",
+     "video_title": "The Atlantic Slave Trade: Crash Course World History #24",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/dnV_MTFEGIY?start=113&end=259",
+     "watch": "https://www.youtube.com/watch?v=dnV_MTFEGIY&t=113s"
+    },
+    {
+     "video_id": "dnV_MTFEGIY",
+     "start": 321,
+     "end": 342,
+     "label": "Why Atlantic slavery was different: chattel slavery",
+     "video_title": "The Atlantic Slave Trade: Crash Course World History #24",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/dnV_MTFEGIY?start=321&end=342",
+     "watch": "https://www.youtube.com/watch?v=dnV_MTFEGIY&t=321s"
+    },
+    {
+     "video_id": "3NXC4Q_4JVg",
+     "start": 234,
+     "end": 296,
+     "label": "Effects on Africa + the birth of racial ideology",
+     "video_title": "The Atlantic slave trade: What too few textbooks told you - Anthony Hazard",
+     "channel": "TED-Ed",
+     "embed": "https://www.youtube-nocookie.com/embed/3NXC4Q_4JVg?start=234&end=296",
+     "watch": "https://www.youtube.com/watch?v=3NXC4Q_4JVg&t=234s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Atlantic slave trade (scale)",
+     "definition": "About 10–12 million Africans were shipped to the Americas from 1500 to 1880, most to Brazil and the Caribbean.",
+     "video_id": "dnV_MTFEGIY",
+     "t": 39,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=dnV_MTFEGIY&t=39s"
+    },
+    {
+     "term": "Chattel slavery",
+     "definition": "Enslaved people treated as movable property, bought and sold. Atlantic slavery was built on this.",
+     "video_id": "dnV_MTFEGIY",
+     "t": 338,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=dnV_MTFEGIY&t=338s"
+    },
+    {
+     "term": "Middle Passage",
+     "definition": "The deadly Atlantic crossing on slave ships: about 4 square feet per person, “not so much room as a man in his coffin.”",
+     "video_id": "dnV_MTFEGIY",
+     "t": 175,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=dnV_MTFEGIY&t=175s"
+    },
+    {
+     "term": "Sugar plantation",
+     "definition": "The main destination of enslaved labor in Brazil and the Caribbean: brutal work, 48-hour shifts at harvest.",
+     "video_id": "dnV_MTFEGIY",
+     "t": 215,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=dnV_MTFEGIY&t=215s"
+    },
+    {
+     "term": "Racial ideology",
+     "definition": "To justify slavery, Europeans claimed Africans were biologically inferior, which gave slavery a racial basis.",
+     "video_id": "3NXC4Q_4JVg",
+     "t": 295,
+     "channel": "TED-Ed",
+     "link": "https://www.youtube.com/watch?v=3NXC4Q_4JVg&t=295s"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Mercantilism, joint-stock companies & ocean rivalries",
+   "bonus": false,
+   "segments": [
+    {
+     "video_id": "kibx9qqWAFM",
+     "start": 101,
+     "end": 171,
+     "label": "Mercantilism in 80 seconds: colonies, raw materials, mother country",
+     "video_title": "Mercantilism Definition | The 200-Year Scheme That Made Europe Rich",
+     "channel": "History Illustrated",
+     "embed": "https://www.youtube-nocookie.com/embed/kibx9qqWAFM?start=101&end=171",
+     "watch": "https://www.youtube.com/watch?v=kibx9qqWAFM&t=101s"
+    },
+    {
+     "video_id": "zPIhMJGWiM8",
+     "start": 255,
+     "end": 362,
+     "label": "The VOC: a joint-stock company that was basically a country",
+     "video_title": "Capitalism and the Dutch East India Company: Crash Course World History 229",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/zPIhMJGWiM8?start=255&end=362",
+     "watch": "https://www.youtube.com/watch?v=zPIhMJGWiM8&t=255s"
+    },
+    {
+     "video_id": "zPIhMJGWiM8",
+     "start": 452,
+     "end": 487,
+     "label": "Fractional shares, futures, insurance: spreading risk",
+     "video_title": "Capitalism and the Dutch East India Company: Crash Course World History 229",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/zPIhMJGWiM8?start=452&end=487",
+     "watch": "https://www.youtube.com/watch?v=zPIhMJGWiM8&t=452s"
+    },
+    {
+     "video_id": "zPIhMJGWiM8",
+     "start": 621,
+     "end": 657,
+     "label": "“No trade without war”: Coen and the spice monopoly",
+     "video_title": "Capitalism and the Dutch East India Company: Crash Course World History 229",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/zPIhMJGWiM8?start=621&end=657",
+     "watch": "https://www.youtube.com/watch?v=zPIhMJGWiM8&t=621s"
+    },
+    {
+     "video_id": "DSkViv_rSbs",
+     "start": 1162,
+     "end": 1243,
+     "label": "Who “won” the Indian Ocean? Ottoman vs Portuguese scorecard",
+     "video_title": "Ottoman-Portuguese War for the Indian Ocean - DOCUMENTARY",
+     "channel": "Kings and Generals",
+     "embed": "https://www.youtube-nocookie.com/embed/DSkViv_rSbs?start=1162&end=1243",
+     "watch": "https://www.youtube.com/watch?v=DSkViv_rSbs&t=1162s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Joint-stock company (VOC)",
+     "definition": "The Dutch East India Company: one chartered company given a monopoly on East Indies trade. It could hire its own people and wage war, and investors owned it through shares.",
+     "video_id": "zPIhMJGWiM8",
+     "t": 255,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=zPIhMJGWiM8&t=255s"
+    },
+    {
+     "term": "Fractional shares",
+     "definition": "Owning a small piece of a company, which spread the risk of a voyage across many investors.",
+     "video_id": "zPIhMJGWiM8",
+     "t": 452,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=zPIhMJGWiM8&t=452s"
+    },
+    {
+     "term": "Monopoly (spice)",
+     "definition": "The VOC used force to become the only seller of spices like nutmeg and cloves. Coen: “no trade without war.”",
+     "video_id": "zPIhMJGWiM8",
+     "t": 621,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=zPIhMJGWiM8&t=621s"
+    },
+    {
+     "term": "Mercantilism",
+     "definition": "Colonies supply raw materials and buy manufactured goods, and may trade only with the mother country, so wealth flows to Europe.",
+     "video_id": "kibx9qqWAFM",
+     "t": 101,
+     "channel": "History Illustrated",
+     "link": "https://www.youtube.com/watch?v=kibx9qqWAFM&t=101s"
+    },
+    {
+     "term": "Ottoman–Portuguese rivalry",
+     "definition": "A Muslim–European struggle over Indian Ocean trade. The Ottomans used corsair raids and the Portuguese used fortified ports.",
+     "video_id": "DSkViv_rSbs",
+     "t": 1162,
+     "channel": "Kings and Generals",
+     "link": "https://www.youtube.com/watch?v=DSkViv_rSbs&t=1162s"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "The Atlantic system: silver, sugar, war — and resistance",
+   "bonus": false,
+   "segments": [
+    {
+     "video_id": "rjhIzemLdos",
+     "start": 272,
+     "end": 319,
+     "label": "Potosí silver + the mit’a labor draft",
+     "video_title": "The Spanish Empire, Silver, & Runaway Inflation: Crash Course World History #25",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/rjhIzemLdos?start=272&end=319",
+     "watch": "https://www.youtube.com/watch?v=rjhIzemLdos&t=272s"
+    },
+    {
+     "video_id": "rjhIzemLdos",
+     "start": 321,
+     "end": 353,
+     "label": "Silver floods Europe: Spain’s runaway inflation",
+     "video_title": "The Spanish Empire, Silver, & Runaway Inflation: Crash Course World History #25",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/rjhIzemLdos?start=321&end=353",
+     "watch": "https://www.youtube.com/watch?v=rjhIzemLdos&t=321s"
+    },
+    {
+     "video_id": "rjhIzemLdos",
+     "start": 462,
+     "end": 569,
+     "label": "Silver goes to China: Ming taxes, galleons, the first global market",
+     "video_title": "The Spanish Empire, Silver, & Runaway Inflation: Crash Course World History #25",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/rjhIzemLdos?start=462&end=569",
+     "watch": "https://www.youtube.com/watch?v=rjhIzemLdos&t=462s"
+    },
+    {
+     "video_id": "j0qbzNHmfW0",
+     "start": 167,
+     "end": 203,
+     "label": "Seven Years’ War: really a war over trade",
+     "video_title": "The Seven Years War: Crash Course World History #26",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/j0qbzNHmfW0?start=167&end=203",
+     "watch": "https://www.youtube.com/watch?v=j0qbzNHmfW0&t=167s"
+    },
+    {
+     "video_id": "j0qbzNHmfW0",
+     "start": 647,
+     "end": 682,
+     "label": "War debt → taxes → American Revolution",
+     "video_title": "The Seven Years War: Crash Course World History #26",
+     "channel": "CrashCourse",
+     "embed": "https://www.youtube-nocookie.com/embed/j0qbzNHmfW0?start=647&end=682",
+     "watch": "https://www.youtube.com/watch?v=j0qbzNHmfW0&t=647s"
+    },
+    {
+     "video_id": "uNXDplgft_g",
+     "start": 111,
+     "end": 148,
+     "label": "Who was “King Philip”? Metacom and the bloodiest war per capita",
+     "video_title": "King Philip's War: The Most Important American War You've Never Heard Of",
+     "channel": "Atun-Shei Films",
+     "embed": "https://www.youtube-nocookie.com/embed/uNXDplgft_g?start=111&end=148",
+     "watch": "https://www.youtube.com/watch?v=uNXDplgft_g&t=111s"
+    },
+    {
+     "video_id": "uNXDplgft_g",
+     "start": 256,
+     "end": 324,
+     "label": "Why it started: land squeeze, praying Indians, Sassamon",
+     "video_title": "King Philip's War: The Most Important American War You've Never Heard Of",
+     "channel": "Atun-Shei Films",
+     "embed": "https://www.youtube-nocookie.com/embed/uNXDplgft_g?start=256&end=324",
+     "watch": "https://www.youtube.com/watch?v=uNXDplgft_g&t=256s"
+    },
+    {
+     "video_id": "EBbYxLmCO6c",
+     "start": 0,
+     "end": 47,
+     "label": "Queen Nzinga’s power move: the human chair",
+     "video_title": "Queen Nzinga - Rise of a Legend - Part 1 - Extra History",
+     "channel": "Extra History",
+     "embed": "https://www.youtube-nocookie.com/embed/EBbYxLmCO6c?start=0&end=47",
+     "watch": "https://www.youtube.com/watch?v=EBbYxLmCO6c&t=0s"
+    },
+    {
+     "video_id": "EBbYxLmCO6c",
+     "start": 411,
+     "end": 460,
+     "label": "Nzinga shelters escaped slaves and resists Portugal",
+     "video_title": "Queen Nzinga - Rise of a Legend - Part 1 - Extra History",
+     "channel": "Extra History",
+     "embed": "https://www.youtube-nocookie.com/embed/EBbYxLmCO6c?start=411&end=460",
+     "watch": "https://www.youtube.com/watch?v=EBbYxLmCO6c&t=411s"
+    },
+    {
+     "video_id": "L2XCbqRi6s0",
+     "start": 16,
+     "end": 42,
+     "label": "Maroons: the free communities of the Great Dismal Swamp",
+     "video_title": "The Hidden Black Society They Don’t Teach You About",
+     "channel": "PBS Origins",
+     "embed": "https://www.youtube-nocookie.com/embed/L2XCbqRi6s0?start=16&end=42",
+     "watch": "https://www.youtube.com/watch?v=L2XCbqRi6s0&t=16s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Mit’a (silver-mine labor draft)",
+     "definition": "The Inca labor draft that Spain adapted for its silver mountain: 1 in 7 adult Native men per district mined for a year at subsistence wages.",
+     "video_id": "rjhIzemLdos",
+     "t": 272,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=rjhIzemLdos&t=272s"
+    },
+    {
+     "term": "Inflation (price revolution)",
+     "definition": "American silver flooded Spain and Europe, money lost value and prices soared.",
+     "video_id": "rjhIzemLdos",
+     "t": 321,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=rjhIzemLdos&t=321s"
+    },
+    {
+     "term": "Manila galleons / global silver",
+     "definition": "Spanish ships carried American silver across the Pacific to buy Chinese goods. Ming China wanted silver for taxes, creating the first global market.",
+     "video_id": "rjhIzemLdos",
+     "t": 462,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=rjhIzemLdos&t=462s"
+    },
+    {
+     "term": "Seven Years’ War",
+     "definition": "Britain vs. France (1756–1763), fought worldwide over trade and colonies. Britain won, but its war debt led to the taxes behind the American Revolution.",
+     "video_id": "j0qbzNHmfW0",
+     "t": 167,
+     "channel": "CrashCourse",
+     "link": "https://www.youtube.com/watch?v=j0qbzNHmfW0&t=167s"
+    },
+    {
+     "term": "Metacom’s (King Philip’s) War",
+     "definition": "Metacom of Pokanoket (the English called him “King Philip”) led a coalition of tribes against encroaching New England colonists. Per capita it was the bloodiest war in American history.",
+     "video_id": "uNXDplgft_g",
+     "t": 111,
+     "channel": "Atun-Shei Films",
+     "link": "https://www.youtube.com/watch?v=uNXDplgft_g&t=111s"
+    },
+    {
+     "term": "Praying Indians",
+     "definition": "Native Americans converted to Christianity and settled in colonial “praying towns,” which deepened tensions.",
+     "video_id": "uNXDplgft_g",
+     "t": 239,
+     "channel": "Atun-Shei Films",
+     "link": "https://www.youtube.com/watch?v=uNXDplgft_g&t=239s"
+    },
+    {
+     "term": "Queen Nzinga",
+     "definition": "Ruler of Ndongo/Matamba (Angola) who spent 40 years resisting Portuguese slaving and conquest through diplomacy and war.",
+     "video_id": "EBbYxLmCO6c",
+     "t": 61,
+     "channel": "Extra History",
+     "link": "https://www.youtube.com/watch?v=EBbYxLmCO6c&t=61s"
+    },
+    {
+     "term": "Maroons",
+     "definition": "People who escaped slavery and built free, hidden communities, like the Great Dismal Swamp, which lasted 250+ years.",
+     "video_id": "L2XCbqRi6s0",
+     "t": 16,
+     "channel": "PBS Origins",
+     "link": "https://www.youtube.com/watch?v=L2XCbqRi6s0&t=16s"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Cultural synthesis & colonial social hierarchy",
+   "bonus": false,
+   "segments": [
+    {
+     "video_id": "qMf8wQBQ8jw",
+     "start": 47,
+     "end": 146,
+     "label": "The casta system: peninsulares vs. criollos",
+     "video_title": "The “Casta” System",
+     "channel": "csuDHTV",
+     "embed": "https://www.youtube-nocookie.com/embed/qMf8wQBQ8jw?start=47&end=146",
+     "watch": "https://www.youtube.com/watch?v=qMf8wQBQ8jw&t=47s"
+    },
+    {
+     "video_id": "VofAQYxcHHY",
+     "start": 1191,
+     "end": 1346,
+     "label": "Syncretism in action: lwa = saints, and Kongo’s King Afonso",
+     "video_title": "Vodou: Haiti's African-Derived Religion",
+     "channel": "ReligionForBreakfast",
+     "embed": "https://www.youtube-nocookie.com/embed/VofAQYxcHHY?start=1191&end=1346",
+     "watch": "https://www.youtube.com/watch?v=VofAQYxcHHY&t=1191s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Casta system",
+     "definition": "Spain’s legal racial hierarchy in its colonies. Your mix of Spanish, Native and African ancestry decided your rights and jobs.",
+     "video_id": "qMf8wQBQ8jw",
+     "t": 32,
+     "channel": "csuDHTV",
+     "link": "https://www.youtube.com/watch?v=qMf8wQBQ8jw&t=32s"
+    },
+    {
+     "term": "Peninsulares",
+     "definition": "Spaniards born in Spain. They held the top jobs: viceroys, governors, bishops.",
+     "video_id": "qMf8wQBQ8jw",
+     "t": 47,
+     "channel": "csuDHTV",
+     "link": "https://www.youtube.com/watch?v=qMf8wQBQ8jw&t=47s"
+    },
+    {
+     "term": "Criollos",
+     "definition": "Spaniards born in the Americas. They were trusted less and kept out of the highest posts.",
+     "video_id": "qMf8wQBQ8jw",
+     "t": 107,
+     "channel": "csuDHTV",
+     "link": "https://www.youtube.com/watch?v=qMf8wQBQ8jw&t=107s"
+    },
+    {
+     "term": "Mestizos / mulattos",
+     "definition": "Mixed Spanish–Native (mestizo) and Spanish–African (mulatto) people, ranked below Spaniards in the casta system.",
+     "video_id": "qMf8wQBQ8jw",
+     "t": 159,
+     "channel": "csuDHTV",
+     "link": "https://www.youtube.com/watch?v=qMf8wQBQ8jw&t=159s"
+    },
+    {
+     "term": "Vodou (syncretism)",
+     "definition": "Haitian religion blending West African traditions with Catholicism. Spirits (lwa) are equated with Catholic saints.",
+     "video_id": "VofAQYxcHHY",
+     "t": 1213,
+     "channel": "ReligionForBreakfast",
+     "link": "https://www.youtube.com/watch?v=VofAQYxcHHY&t=1213s"
+    },
+    {
+     "term": "Lwa",
+     "definition": "The spirits served in Vodou, also called saints or mysteries.",
+     "video_id": "VofAQYxcHHY",
+     "t": 498,
+     "channel": "ReligionForBreakfast",
+     "link": "https://www.youtube.com/watch?v=VofAQYxcHHY&t=498s"
+    },
+    {
+     "term": "Kingdom of Kongo / King Afonso I",
+     "definition": "A Central African kingdom that became Catholic in 1491–1509, so Africans were blending Catholicism with ancestral religion before the Atlantic crossing.",
+     "video_id": "VofAQYxcHHY",
+     "t": 1268,
+     "channel": "ReligionForBreakfast",
+     "link": "https://www.youtube.com/watch?v=VofAQYxcHHY&t=1268s"
+    },
+    {
+     "term": "Code Noir (1685)",
+     "definition": "Louis XIV’s rules for treating enslaved people in French colonies, including forced conversion to Christianity.",
+     "video_id": "VofAQYxcHHY",
+     "t": 274,
+     "channel": "ReligionForBreakfast",
+     "link": "https://www.youtube.com/watch?v=VofAQYxcHHY&t=274s"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Bonus: Europe 1500–1750 — the Reformation",
+   "bonus": true,
+   "segments": [
+    {
+     "video_id": "FhGGjRjvq7w",
+     "start": 61,
+     "end": 156,
+     "label": "Indulgences, the 95 Theses, and “I cannot and will not recant”",
+     "video_title": "A Fun, Animated History of the Reformation and the Man Who Started It All | Short Film Showcase",
+     "channel": "National Geographic",
+     "embed": "https://www.youtube-nocookie.com/embed/FhGGjRjvq7w?start=61&end=156",
+     "watch": "https://www.youtube.com/watch?v=FhGGjRjvq7w&t=61s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Indulgences",
+     "definition": "Church documents sold to reduce time in purgatory, which was Luther’s main complaint.",
+     "video_id": "FhGGjRjvq7w",
+     "t": 83,
+     "channel": "National Geographic",
+     "link": "https://www.youtube.com/watch?v=FhGGjRjvq7w&t=83s"
+    },
+    {
+     "term": "95 Theses",
+     "definition": "Luther’s 1517 list of arguments against the Church, posted on the Wittenberg church door for debate.",
+     "video_id": "FhGGjRjvq7w",
+     "t": 92,
+     "channel": "National Geographic",
+     "link": "https://www.youtube.com/watch?v=FhGGjRjvq7w&t=92s"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "title": "Bonus debate: did empire leave a debt? (Oxford Union)",
+   "bonus": true,
+   "segments": [
+    {
+     "video_id": "f7CW7S0zxv4",
+     "start": 77,
+     "end": 203,
+     "label": "Tharoor (FOR): India’s 23% → 4% and the deindustrialization argument",
+     "video_title": "Dr Shashi Tharoor MP - Britain Does Owe Reparations",
+     "channel": "OxfordUnion",
+     "embed": "https://www.youtube-nocookie.com/embed/f7CW7S0zxv4?start=77&end=203",
+     "watch": "https://www.youtube.com/watch?v=f7CW7S0zxv4&t=77s"
+    },
+    {
+     "video_id": "eGpgzVtD5qc",
+     "start": 100,
+     "end": 197,
+     "label": "Alpha Lee (AGAINST): condemn colonialism, but reparations are the wrong tool",
+     "video_title": "Alpha Lee - Britain Does Not Owe Reparations",
+     "channel": "OxfordUnion",
+     "embed": "https://www.youtube-nocookie.com/embed/eGpgzVtD5qc?start=100&end=197",
+     "watch": "https://www.youtube.com/watch?v=eGpgzVtD5qc&t=100s"
+    }
+   ],
+   "vocab": [
+    {
+     "term": "Deindustrialization (India)",
+     "definition": "Tharoor’s argument: India’s share of the world economy fell from 23% to 4% under British rule as its textile industry was destroyed.",
+     "video_id": "f7CW7S0zxv4",
+     "t": 86,
+     "channel": "OxfordUnion",
+     "link": "https://www.youtube.com/watch?v=f7CW7S0zxv4&t=86s"
+    },
+    {
+     "term": "Reparations",
+     "definition": "Payment to make up for historical wrongs. Lee argues money would discharge the moral debt without helping people.",
+     "video_id": "eGpgzVtD5qc",
+     "t": 143,
+     "channel": "OxfordUnion",
+     "link": "https://www.youtube.com/watch?v=eGpgzVtD5qc&t=143s"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "video_id": "uNXDplgft_g",
+   "title": "King Philip's War: The Most Important American War You've Never Heard Of",
+   "channel": "Atun-Shei Films",
+   "length_s": 1034,
+   "url": "https://www.youtube.com/watch?v=uNXDplgft_g"
+  },
+  {
+   "video_id": "zPIhMJGWiM8",
+   "title": "Capitalism and the Dutch East India Company: Crash Course World History 229",
+   "channel": "CrashCourse",
+   "length_s": 940,
+   "url": "https://www.youtube.com/watch?v=zPIhMJGWiM8"
+  },
+  {
+   "video_id": "NjEGncridoQ",
+   "title": "Columbus, Vasco da Gama, and Zheng He - 15th Century Mariners: Crash Course World History #21",
+   "channel": "CrashCourse",
+   "length_s": 637,
+   "url": "https://www.youtube.com/watch?v=NjEGncridoQ"
+  },
+  {
+   "video_id": "dnV_MTFEGIY",
+   "title": "The Atlantic Slave Trade: Crash Course World History #24",
+   "channel": "CrashCourse",
+   "length_s": 668,
+   "url": "https://www.youtube.com/watch?v=dnV_MTFEGIY"
+  },
+  {
+   "video_id": "HQPA5oNpfM4",
+   "title": "The Columbian Exchange: Crash Course World History #23",
+   "channel": "CrashCourse",
+   "length_s": 729,
+   "url": "https://www.youtube.com/watch?v=HQPA5oNpfM4"
+  },
+  {
+   "video_id": "j0qbzNHmfW0",
+   "title": "The Seven Years War: Crash Course World History #26",
+   "channel": "CrashCourse",
+   "length_s": 740,
+   "url": "https://www.youtube.com/watch?v=j0qbzNHmfW0"
+  },
+  {
+   "video_id": "rjhIzemLdos",
+   "title": "The Spanish Empire, Silver, & Runaway Inflation: Crash Course World History #25",
+   "channel": "CrashCourse",
+   "length_s": 645,
+   "url": "https://www.youtube.com/watch?v=rjhIzemLdos"
+  },
+  {
+   "video_id": "EBbYxLmCO6c",
+   "title": "Queen Nzinga - Rise of a Legend - Part 1 - Extra History",
+   "channel": "Extra History",
+   "length_s": 551,
+   "url": "https://www.youtube.com/watch?v=EBbYxLmCO6c"
+  },
+  {
+   "video_id": "kibx9qqWAFM",
+   "title": "Mercantilism Definition | The 200-Year Scheme That Made Europe Rich",
+   "channel": "History Illustrated",
+   "length_s": 317,
+   "url": "https://www.youtube.com/watch?v=kibx9qqWAFM"
+  },
+  {
+   "video_id": "3tpJbjKJeE0",
+   "title": "Why did Japan ban everyone except for the Dutch? (Short Animated Documentary)",
+   "channel": "History Matters",
+   "length_s": 206,
+   "url": "https://www.youtube.com/watch?v=3tpJbjKJeE0"
+  },
+  {
+   "video_id": "QbOGCeNfubE",
+   "title": "Navigating New Worlds: Technological Advances of the Age of Discovery | 3-Minute History",
+   "channel": "History Savant",
+   "length_s": 162,
+   "url": "https://www.youtube.com/watch?v=QbOGCeNfubE"
+  },
+  {
+   "video_id": "suRAVIndO4Y",
+   "title": "Aztecs: Arrival of Cortes and the Conquistadors",
+   "channel": "Kings and Generals",
+   "length_s": 846,
+   "url": "https://www.youtube.com/watch?v=suRAVIndO4Y"
+  },
+  {
+   "video_id": "DSkViv_rSbs",
+   "title": "Ottoman-Portuguese War for the Indian Ocean - DOCUMENTARY",
+   "channel": "Kings and Generals",
+   "length_s": 1286,
+   "url": "https://www.youtube.com/watch?v=DSkViv_rSbs"
+  },
+  {
+   "video_id": "xPm8E-zWwsQ",
+   "title": "Spanish Conquest of the Incan Empire",
+   "channel": "Kings and Generals",
+   "length_s": 782,
+   "url": "https://www.youtube.com/watch?v=xPm8E-zWwsQ"
+  },
+  {
+   "video_id": "FhGGjRjvq7w",
+   "title": "A Fun, Animated History of the Reformation and the Man Who Started It All | Short Film Showcase",
+   "channel": "National Geographic",
+   "length_s": 295,
+   "url": "https://www.youtube.com/watch?v=FhGGjRjvq7w"
+  },
+  {
+   "video_id": "eGpgzVtD5qc",
+   "title": "Alpha Lee - Britain Does Not Owe Reparations",
+   "channel": "OxfordUnion",
+   "length_s": 787,
+   "url": "https://www.youtube.com/watch?v=eGpgzVtD5qc"
+  },
+  {
+   "video_id": "f7CW7S0zxv4",
+   "title": "Dr Shashi Tharoor MP - Britain Does Owe Reparations",
+   "channel": "OxfordUnion",
+   "length_s": 929,
+   "url": "https://www.youtube.com/watch?v=f7CW7S0zxv4"
+  },
+  {
+   "video_id": "L2XCbqRi6s0",
+   "title": "The Hidden Black Society They Don’t Teach You About",
+   "channel": "PBS Origins",
+   "length_s": 742,
+   "url": "https://www.youtube.com/watch?v=L2XCbqRi6s0"
+  },
+  {
+   "video_id": "VofAQYxcHHY",
+   "title": "Vodou: Haiti's African-Derived Religion",
+   "channel": "ReligionForBreakfast",
+   "length_s": 1491,
+   "url": "https://www.youtube.com/watch?v=VofAQYxcHHY"
+  },
+  {
+   "video_id": "3NXC4Q_4JVg",
+   "title": "The Atlantic slave trade: What too few textbooks told you - Anthony Hazard",
+   "channel": "TED-Ed",
+   "length_s": 338,
+   "url": "https://www.youtube.com/watch?v=3NXC4Q_4JVg"
+  },
+  {
+   "video_id": "qMf8wQBQ8jw",
+   "title": "The “Casta” System",
+   "channel": "csuDHTV",
+   "length_s": 618,
+   "url": "https://www.youtube.com/watch?v=qMf8wQBQ8jw"
+  }
+ ]
+}
