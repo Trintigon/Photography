@@ -1,0 +1,19 @@
+{
+ "_readme": "Units shown on /apworld/. Add a unit by dropping its JSON in data/ and pointing an entry at it. An entry with no file shows as 'coming next'. The first entry with a file is the default.",
+ "units": [
+  {
+   "slug": "unit4",
+   "label": "Unit 4",
+   "name": "Transoceanic Interconnections",
+   "years": "1450–1750",
+   "file": "apworld-unit4.json"
+  },
+  {
+   "slug": "unit3",
+   "label": "Unit 3",
+   "name": "Land-Based Empires",
+   "years": "1450–1750",
+   "file": null
+  }
+ ]
+}
